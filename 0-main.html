@@ -40,17 +40,26 @@
 				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
 				<div class="gnb">
 					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
-					<ul class="nav">
-						<li><a href="1-price.html" target="_self">Price</a></li>
-						<li><a href="2-docs.html" target="_self">Docs</a></li>
-						<li><a href="3-faq.html" target="_self">FAQ</a></li>
-						<li><a href="4.contact.html" target="_self">Contact</a></li>
-					</ul>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
 				</div>
 			</div>
 		</div>
 		<!-- //공통헤더 -->
 
+		<!-- 메인 컨텐츠 -->
 		<div class="main__container">
 			<div class="visual">
 				<div class="swiper mainSwiper">
@@ -185,7 +194,7 @@
 					<div class="info--wrap efficiency">
 						<h3>
 							 <div>최대 70% 경제적으로 <span>사용하는 GPU.</span></div>
-							 <div>비용 걱정 없이 사용한 만큼만 <span>이용하세요.</span>           </div>
+							 <div>비용 걱정 없이 사용한 만큼만 <span>이용하세요.</span></div>
 						</h3>
 						<div class="efficiency--wrap">
 							<div class="graph--wrap">
@@ -221,6 +230,24 @@
 									</li>
 								</ul>
 							</div>
+							<div class="comparison--wrap">
+								<button class="comparison__title"><span>GPU를 선택하세요</span></button>
+								<ul class="comparison__list">
+									<li>RTX 4090 사용 시</li>
+									<li>RTX 4090 사용 시</li>
+									<li>RTX 4090 사용 시</li>
+									<li>RTX 4090 사용 시</li>
+									<li>RTX 4090 사용 시</li>
+									<li>RTX 4090 사용 시</li>
+								</ul>
+								<dl>
+									<dt>1개월 기준</dt>
+									<dd>
+										<strong><span class="price">??</span>만원 부터</strong> 이용할 수 있습니다. 
+									</dd>
+								</dl>
+								<p class="comparison__info">gcube는 GPU 이용 시 사용하지 않은 시간은 비용을 부과하지 않습니다. 실시간 모니터링을 통해 실제 리소스 사용 비율에 따라 비용이 부과됩니다.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -242,70 +269,55 @@
 				</div>
 			</div>
 			<div class="main__content main__content3"><h2>섹션3</h2><h3>섹션3</h3></div>
-			<style>
-		
-		.main__content2 { height: 150vh; }
-		.main__content3 { background: #ff0; color: #000; height: 200vh;}
-		
-	  </style>
 		</div>
-		
-		<!-- 로더 -->
-		<div class="loader"><div class="circle"></div></div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
 	</div>
 	<script>
-		const vh = window.innerHeight;
 		const contents = Array.from(document.querySelectorAll('[class^=main__content]'));
-		const heights = contents.map(c => c.clientHeight);
 		const visual = document.querySelector('.visual');
 		const mainContainer = document.querySelector('.main__container');
-
-		// 각 섹션의 끝 위치 (visual + 이전 섹션들의 합)
-		let accum = vh;
-		const stickPoints = [];
-		for (let i = 0; i < contents.length; i++) {
+		let vh, heights, stickPoints;
+		let lastFixedIndex = -1;
+		function calculateMetrics() {
+		  vh = window.innerHeight;
+		  heights = contents.map(c => c.clientHeight);
+		  stickPoints = [];
+		  let accum = vh;
+		  for (let i = 0; i < contents.length; i++) {
 			stickPoints.push(accum);
 			accum += heights[i];
+		  }
 		}
-
-		// 현재 고정된 섹션 (content1, content2만)
-		let lastFixedIndex = -1;
-
-		window.addEventListener('scroll', () => {
-			const scrollY = window.scrollY;
-			// content3은 fixed 대상 아님
-			const maxFixIndex = contents.length - 2; // content2까지만 fixed
-
-			// 패딩 계산을 위한 기준: 현재 스크롤에 따라 패딩이 점진적으로 커져야 함
-			let paddingTopTarget = vh; // 최소: visual만
-
-			// content1이 화면 하단에 닿으면 패딩에 content1 높이 추가
-			if (scrollY + vh >= stickPoints[0] + heights[0]) {
-				paddingTopTarget += heights[0];
-				// content2가 화면 하단에 닿으면 패딩에 content2 높이 추가
-				if (scrollY + vh >= stickPoints[1] + heights[1]) {
-					paddingTopTarget += heights[1];
-				}
+		function onScroll() {
+		  const scrollY = window.scrollY;
+		  const maxFixIndex = contents.length - 2;
+		  let paddingTopTarget = vh;
+		  if (scrollY + vh >= stickPoints[0] + heights[0]) {
+			paddingTopTarget += heights[0];
+			if (scrollY + vh >= stickPoints[1] + heights[1]) {
+			  paddingTopTarget += heights[1];
 			}
-
-			// main-container의 padding-top을 부드럽게 조정
-			mainContainer.style.paddingTop = `${paddingTopTarget}px`;
-
-			// content1, content2에 대해 fixed 조건 판단
-			for (let i = 0; i <= maxFixIndex; i++) {
-				// 하단에 닿으면 fixed 추가 (스크롤 down)
-				if (scrollY + vh >= stickPoints[i] + heights[i]) {
-					if (lastFixedIndex <= i) {
-						contents[i].classList.add('content-fixed');
-						lastFixedIndex = i;
-					}
-				}
-				// 하단에서 떨어지면 fixed 해제 (스크롤 up)
-				else if (scrollY + vh < stickPoints[i] + heights[i] && i <= lastFixedIndex) {
-					contents[i].classList.remove('content-fixed');
-					lastFixedIndex = i - 1;
-				}
+		  }
+		  mainContainer.style.paddingTop = `${paddingTopTarget}px`;
+		  for (let i = 0; i <= maxFixIndex; i++) {
+			if (scrollY + vh >= stickPoints[i] + heights[i]) {
+			  if (lastFixedIndex <= i) {
+				contents[i].classList.add('content-fixed');
+				lastFixedIndex = i;
+			  }
+			} else if (scrollY + vh < stickPoints[i] + heights[i] && i <= lastFixedIndex) {
+			  contents[i].classList.remove('content-fixed');
+			  lastFixedIndex = i - 1;
 			}
+		  }
+		}
+		calculateMetrics();
+		window.addEventListener('scroll', onScroll);
+		window.addEventListener('resize', () => {
+		  calculateMetrics();
+		  onScroll();
 		});
 	</script>
 </body>
