@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // GNB
   var btnNav = document.querySelector(".btn__nav");
   if (btnNav) {
@@ -53,9 +52,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 토글 버튼
-  document.querySelectorAll(".btn__tooggle").forEach(function (btn) {
+  document.querySelectorAll(".btn__toggle").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      btn.classList.toggle("on");
+      btn.classList.toggle("is-active");
+    });
+  });
+
+	// 탭
+	const tabWraps = document.querySelectorAll('.tab--wrap');
+  tabWraps.forEach(tabWrap => {
+    const isAccordion = tabWrap.classList.contains('accordion');
+    const tabTitles = tabWrap.querySelectorAll('.tab__title');
+    tabTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        const windowWidth = window.innerWidth;
+        if (isAccordion && windowWidth < 1920) {
+          if (title.classList.contains('is-active')) {
+            title.classList.remove('is-active');
+            return;
+          }
+        }
+        tabTitles.forEach(t => t.classList.remove('is-active'));
+        title.classList.add('is-active');
+      });
     });
   });
 });

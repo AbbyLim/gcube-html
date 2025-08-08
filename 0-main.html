@@ -81,9 +81,10 @@
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
+				<!-- 메인비쥬얼 swiper -->
 				<script>
 					var mainSwiper = new Swiper(".mainSwiper", {
-						speed: 1000,
+						speed: 1200,
 						autoplay: {
 						  delay: 6000,
 						  disableOnInteraction: false,
@@ -199,54 +200,123 @@
 						<div class="efficiency--wrap">
 							<div class="graph--wrap">
 								<h4>시간당 GPU 사용 비용</h4>
-								<ul class="graph__list other">
+								<ul class="graph__list">
 									<li>
 										<dl>
-											<dd class="other"><div class="bar"><div>39,746원</div></div></dd>
-											<dd class="mine"><div class="bar"><div>4,830원</div></div></dd>
+											<dd class="other"><div class="bar"><p>39,746원</p></div></dd>
+											<dd class="mine">
+												<div class="bar">
+													<p>4,830원</p>
+													<div class="reduction--wrap">
+														<div class="reduction__title">
+															<strong></strong>
+															<span><em></em></span>
+														</div>
+														<div class="reduction__text">타사 대비 비용 절감율</div>
+													</div>
+												</div>
+											</dd>
 											<dt>V100</dt>
 										</dl>
 									</li>
 									<li>
 										<dl>
-											<dd class="other"><div class="bar"><div>137,646원</div></div></dd>
-											<dd class="mine"><div class="bar"><div>34,720원</div></div></dd>
+											<dd class="other"><div class="bar"><p>137,646원</p></div></dd>
+											<dd class="mine">
+												<div class="bar">
+													<p>34,720원</p>
+													<div class="reduction--wrap">
+														<div class="reduction__title">
+															<strong></strong>
+															<span><em></em></span>
+														</div>
+														<div class="reduction__text">타사 대비 비용 절감율</div>
+													</div>
+												</div>
+											</dd>
 											<dt>T4</dt>
 										</dl>
 									</li>
 									<li>
 										<dl>
-											<dd class="other"><div class="bar"><div>57,344원</div></div></dd>
-											<dd class="mine"><div class="bar"><div>20,790원</div></div></dd>
+											<dd class="other"><div class="bar"><p>57,344원</p></div></dd>
+											<dd class="mine">
+												<div class="bar">
+													<p>20,790원</p>
+													<div class="reduction--wrap">
+														<div class="reduction__title">
+															<strong></strong>
+															<span><em></em></span>
+														</div>
+														<div class="reduction__text">타사 대비 비용 절감율</div>
+													</div>
+												</div>
+											</dd>
 											<dt>RTX 4090</dt>
 										</dl>
 									</li>
 									<li>
 										<dl>
-											<dd class="other"><div class="bar"><div>34,272원</div></div></dd>
-											<dd class="mine"><div class="bar"><div>1,610원</div></div></dd>
+											<dd class="other"><div class="bar"><p>34,272원</p></div></dd>
+											<dd class="mine">
+												<div class="bar">
+													<p>1,610원</p>
+													<div class="reduction--wrap">
+														<div class="reduction__title">
+															<strong></strong>
+															<span><em></em></span>
+														</div>
+														<div class="reduction__text">타사 대비 비용 절감율</div>
+													</div>
+												</div>
+											</dd>
 											<dt>RTX 4080</dt>
 										</dl>
 									</li>
 								</ul>
 							</div>
 							<div class="comparison--wrap">
-								<button class="comparison__title"><span>GPU를 선택하세요</span></button>
-								<ul class="comparison__list">
-									<li>RTX 4090 사용 시</li>
-									<li>RTX 4090 사용 시</li>
-									<li>RTX 4090 사용 시</li>
-									<li>RTX 4090 사용 시</li>
-									<li>RTX 4090 사용 시</li>
-									<li>RTX 4090 사용 시</li>
-								</ul>
-								<dl>
+								<div class="option--wrap">
+									<button class="btn__option">
+										<span>GPU를 선택하세요</span>
+									</button>
+									<ul class="option__list">
+										<li>
+											<label>
+												<input type="radio" name="optionGpu" data-price="11" />
+												<span>RTX 4040 사용 시</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="optionGpu" data-price="22" />
+												<span>RTX 4050 사용 시</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="optionGpu" data-price="33" />
+												<span>RTX 4060 사용 시</span>
+											</label>
+										</li>
+										<li>   
+											<label>
+												<input type="radio" name="optionGpu" data-price="44" />
+												<span>RTX 4070 사용 시</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<dl class="option__price">
 									<dt>1개월 기준</dt>
 									<dd>
 										<strong><span class="price">??</span>만원 부터</strong> 이용할 수 있습니다. 
 									</dd>
 								</dl>
 								<p class="comparison__info">gcube는 GPU 이용 시 사용하지 않은 시간은 비용을 부과하지 않습니다. 실시간 모니터링을 통해 실제 리소스 사용 비율에 따라 비용이 부과됩니다.</p>
+								<div class="btn--wrap">
+									<button type="button" class="btn__default">월 예상비용 확인하기</button>
+								 </div>
 							</div>
 						</div>
 					</div>
@@ -265,6 +335,28 @@
 							 <div>목적과 스펙의 다양한 GPU를</div>
 							 <div>선택할 수 있습니다.</div>
 						</h3>
+						<dl class="tab--wrap accordion">
+							<dt class="tab__title title1 is-active">
+								<span>TIER 1</span>
+								<div>정부 지원 사업용 <strong>대규모 데이터 처리</strong></div>
+							</dt>
+							<dd class="tab__content content1">탭1</dd>
+							<dt class="tab__title title2">
+								<span>TIER 1</span>
+								<div>대학, 연구소에서 <strong>연구 목적으로 사용</strong></div>
+							</dt>
+							<dd class="tab__content content2">탭2</dd>
+							<dt class="tab__title title3">
+								<span>TIER 1</span>
+								<div>스타트업에서 <strong>AI 모델 개발 진행</strong></div>
+							</dt>
+							<dd class="tab__content content3">탭3</dd>
+							<dt class="tab__title title4">
+								<span>TIER 1</span>
+								<div>개인 개발자 <strong>mining을 위한 자원</strong></div>
+							</dt>
+							<dd class="tab__content content4">탭4</dd>
+						</dl>
 					</div>
 				</div>
 			</div>
@@ -275,49 +367,116 @@
 		<div class="dim"></div>
 	</div>
 	<script>
-		const contents = Array.from(document.querySelectorAll('[class^=main__content]'));
-		const visual = document.querySelector('.visual');
-		const mainContainer = document.querySelector('.main__container');
-		let vh, heights, stickPoints;
-		let lastFixedIndex = -1;
-		function calculateMetrics() {
-		  vh = window.innerHeight;
-		  heights = contents.map(c => c.clientHeight);
-		  stickPoints = [];
-		  let accum = vh;
-		  for (let i = 0; i < contents.length; i++) {
-			stickPoints.push(accum);
-			accum += heights[i];
-		  }
-		}
-		function onScroll() {
-		  const scrollY = window.scrollY;
-		  const maxFixIndex = contents.length - 2;
-		  let paddingTopTarget = vh;
-		  if (scrollY + vh >= stickPoints[0] + heights[0]) {
-			paddingTopTarget += heights[0];
-			if (scrollY + vh >= stickPoints[1] + heights[1]) {
-			  paddingTopTarget += heights[1];
-			}
-		  }
-		  mainContainer.style.paddingTop = `${paddingTopTarget}px`;
-		  for (let i = 0; i <= maxFixIndex; i++) {
-			if (scrollY + vh >= stickPoints[i] + heights[i]) {
-			  if (lastFixedIndex <= i) {
-				contents[i].classList.add('content-fixed');
-				lastFixedIndex = i;
+		document.addEventListener("DOMContentLoaded", function () {
+			// 메인 레이아웃
+			const contents = Array.from(document.querySelectorAll('[class^=main__content]'));
+			const visual = document.querySelector('.visual');
+			const mainContainer = document.querySelector('.main__container');
+			let vh, heights, stickPoints;
+			let lastFixedIndex = -1;
+			function calculateMetrics() {
+			  vh = window.innerHeight;
+			  heights = contents.map(c => c.clientHeight);
+			  stickPoints = [];
+			  let accum = vh;
+			  for (let i = 0; i < contents.length; i++) {
+				stickPoints.push(accum);
+				accum += heights[i];
 			  }
-			} else if (scrollY + vh < stickPoints[i] + heights[i] && i <= lastFixedIndex) {
-			  contents[i].classList.remove('content-fixed');
-			  lastFixedIndex = i - 1;
 			}
-		  }
-		}
-		calculateMetrics();
-		window.addEventListener('scroll', onScroll);
-		window.addEventListener('resize', () => {
-		  calculateMetrics();
-		  onScroll();
+			function onScroll() {
+			  const scrollY = window.scrollY;
+			  const maxFixIndex = contents.length - 2;
+			  let paddingTopTarget = vh;
+			  if (scrollY + vh >= stickPoints[0] + heights[0]) {
+				paddingTopTarget += heights[0];
+				if (scrollY + vh >= stickPoints[1] + heights[1]) {
+				  paddingTopTarget += heights[1];
+				}
+			  }
+			  mainContainer.style.paddingTop = `${paddingTopTarget}px`;
+			  for (let i = 0; i <= maxFixIndex; i++) {
+				if (scrollY + vh >= stickPoints[i] + heights[i]) {
+				  if (lastFixedIndex <= i) {
+					contents[i].classList.add('content-fixed');
+					lastFixedIndex = i;
+				  }
+				} else if (scrollY + vh < stickPoints[i] + heights[i] && i <= lastFixedIndex) {
+				  contents[i].classList.remove('content-fixed');
+				  lastFixedIndex = i - 1;
+				}
+			  }
+			}
+			calculateMetrics();
+			window.addEventListener('scroll', onScroll);
+			window.addEventListener('resize', () => {
+			  calculateMetrics();
+			  onScroll();
+			});
+			// GPU견적 comparison--wrap
+			const btnOption = document.querySelector('.btn__option');
+			const optionList = document.querySelector('.option__list');
+			const priceSpan = document.querySelector('.option__price .price');
+			btnOption.addEventListener('click', () => {
+				btnOption.classList.toggle('is-active');
+			});
+			optionList.addEventListener('click', (event) => {
+				const label = event.target.closest('label');
+				if (!label) return;
+				const span = label.querySelector('span');
+				if (!span) return;
+				btnOption.querySelector('span').textContent = span.textContent;
+				const input = label.querySelector('input[type="radio"]');
+				if (input) {
+					const price = input.dataset.price || '??';
+					priceSpan.textContent = price;
+				}
+				btnOption.classList.remove('is-active');
+				if (input) input.checked = true;
+			});
+			// GPU견적 그래프모션 graph--wrap
+			const maxPrice = 140000;
+			const listItems = document.querySelectorAll('.graph--wrap .graph__list li');
+			const efficiencySection = document.querySelector('.efficiency');
+			const windowMiddle = window.innerHeight / 2;
+			const liHeights = Array.from(listItems).map(li => li.clientHeight);
+			const maxLiHeight = Math.max(...liHeights);
+			function parsePrice(text) {
+				return Number(text.replace(/[^0-9]/g, ''));
+			}
+			function setBarHeights() {
+				listItems.forEach(li => {
+					const otherPriceText = li.querySelector('.graph--wrap dd.other .bar p').textContent;
+					const minePriceText = li.querySelector('.graph--wrap dd.mine .bar p').textContent;
+					const otherPrice = parsePrice(otherPriceText);
+					const minePrice = parsePrice(minePriceText);
+					const otherHeight = (otherPrice / maxPrice) * maxLiHeight;
+					const mineHeight = (minePrice / maxPrice) * maxLiHeight;
+					li.querySelector('.graph--wrap dd.other .bar').style.height = otherHeight + 'px';
+					li.querySelector('.graph--wrap dd.mine .bar').style.height = mineHeight + 'px';
+					const reductionPercent = Math.round(((otherPrice - minePrice) / otherPrice) * 100);
+					const reductionAmount = otherPrice - minePrice;
+					const strongEl = li.querySelector('.reduction__title strong');
+					const spanEl = li.querySelector('.reduction__title em');
+
+					if (strongEl) strongEl.textContent = reductionPercent + '%';
+					if (spanEl) spanEl.textContent = reductionAmount.toLocaleString() + '원';
+				});
+			}
+			function checkEfficiencySection() {
+				const rect = efficiencySection.getBoundingClientRect();
+				if (rect.top <= windowMiddle && rect.bottom >= windowMiddle) {
+					setBarHeights();
+					efficiencySection.classList.add('active');
+					window.removeEventListener('scroll', checkEfficiencySection);
+				}
+			}
+			listItems.forEach(li => {
+				li.querySelector('.graph--wrap dd.other .bar').style.height = '0px';
+				li.querySelector('.graph--wrap dd.mine .bar').style.height = '0px';
+			});
+			window.addEventListener('scroll', checkEfficiencySection);
+			checkEfficiencySection();
 		});
 	</script>
 </body>
