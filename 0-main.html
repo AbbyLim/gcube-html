@@ -21,16 +21,12 @@
 	<link rel="shortcut icon" href="assets/favi/favicon.ico">
 	<meta name="theme-color" content="#ffffff">
 	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fullpage.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" /><!-- main.css -->
 	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="assets/js/common.js"></script>
-	<script type="text/javascript" src="assets/js/scrolloverflow.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.fullpage.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.fullpage.extensions.min.js"></script>
-	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
 </head>
 <body>
 	<div class="wrap  main--wrap">
@@ -100,6 +96,8 @@
 			<div class="main__content main__content1">
 				<div class="inner">
 					<h2><span>최소 비용으로 효율적인 GPU 사용</span></h2>
+
+					<!-- 장점 swiper -->
 					<div class="info--wrap benefit">
 						<h3>
 							 <div>성능은 좋지만 높은 비용, <span>비용은 낮지만 부족한 성능.</span></div>
@@ -156,22 +154,21 @@
 							  slides.forEach(el => el.classList.remove('active'));
 							  activeIndex = 0;
 							}
-							//swiper동작
 							function enableSwiper() {
 							  if (!benefitSwiper) {
 								benefitSwiper = new Swiper(".benefitSwiper", {
 								  pagination: {
 									el: ".benefitSwiper .swiper-pagination",
-									clickable: true,
+										clickable: true,
 								  },
 								  autoplay: {
-									delay: 4000,
-									disableOnInteraction: false,
+										delay: 4000,
+										disableOnInteraction: false,
 								  },
+									spaceBetween: 16,
 								});
 							  }
 							}
-							//swiper해제
 							function disableSwiper() {
 							  if (benefitSwiper) {
 								benefitSwiper.destroy(true, true);
@@ -192,6 +189,8 @@
 							window.addEventListener('beforeunload', removeActiveAnimation);
 						</script>
 					</div>
+
+					<!-- 그래프영역 -->
 					<div class="info--wrap efficiency">
 						<h3>
 							 <div>최대 70% 경제적으로 <span>사용하는 GPU.</span></div>
@@ -274,6 +273,12 @@
 										</dl>
 									</li>
 								</ul>
+								<dl class="category--wrap">
+									<dt>gcube</dt>
+									<dd><div class="mine">자사</div></dd>
+									<dt>타사</dt>
+									<dd><div>타사</div></dd>
+								</dl>
 							</div>
 							<div class="comparison--wrap">
 								<div class="option--wrap">
@@ -325,6 +330,8 @@
 			<div class="main__content main__content2">
 				<div class="inner">
 					<h2><span>경제적이고 다양한 GPU</span></h2>
+					
+					<!-- GPU 스펙비교 -->
 					<div class="info--wrap variety">
 						<h3 class="pc-only">
 							 <div>gcube에서 원하는 목적과 스펙의</div>
@@ -340,27 +347,694 @@
 								<span>TIER 1</span>
 								<div>정부 지원 사업용 <strong>대규모 데이터 처리</strong></div>
 							</dt>
-							<dd class="tab__content content1">탭1</dd>
+							<dd class="tab__content">
+								<ul class="hashtag__list">
+									<li>대용량</li>
+									<li>고사양</li>
+									<li>24시간 안정적</li>
+								</ul>
+								<h3>Cloud 사업자가 제공하는 GPU</h3>
+								<ul class="service__list">
+									<li><img src="assets/images/logo_aws.svg" alt="AWS" /></li>
+									<li><img src="assets/images/logo_naver.svg" alt="NAVER Cloud" /></li>
+									<li><img src="assets/images/logo_google.svg" alt="Google Cloud" /></li>
+									<li><img src="assets/images/logo_ms.svg" alt="Microsoft Azure" /></li>
+								</ul>
+								<ul class="product__list">
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+								</ul>
+							</dd>
 							<dt class="tab__title title2">
-								<span>TIER 1</span>
+								<span>TIER 2</span>
 								<div>대학, 연구소에서 <strong>연구 목적으로 사용</strong></div>
 							</dt>
-							<dd class="tab__content content2">탭2</dd>
+							<dd class="tab__content">
+								<ul class="hashtag__list">
+									<li>안정적 네트워크</li>
+									<li>고사양</li>
+									<li>맞춤형</li>
+								</ul> 
+								<h3>직접 계약을 통해 제공하는 전용 서버 GPU</h3>
+								<ul class="product__list">
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 4090 / 24GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 4080 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 3060 / 24GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+								</ul>
+							</dd>
 							<dt class="tab__title title3">
-								<span>TIER 1</span>
+								<span>TIER 3</span>
 								<div>스타트업에서 <strong>AI 모델 개발 진행</strong></div>
 							</dt>
-							<dd class="tab__content content3">탭3</dd>
+							<dd class="tab__content">
+								<ul class="hashtag__list">
+									<li>저렴한</li>
+									<li>다양한</li>
+									<li>탄력적</li>
+								</ul>
+								<h3>경제적인 가격으로 사용하는 개인 / PC방 GPU</h3>
+								<div class="example--wrap">
+									<dl>
+										<dt>GPU 모델</dt>
+										<dd>37종 +</dd>
+									</dl>
+									<dl>
+										<dt>시간당 가격</dt>
+										<dd>42원~</dd>
+									</dl>
+									<dl>
+										<dt>월 사용 비용</dt>
+										<dd>30,000원~</dd>
+									</dl>
+								</div>
+								<ul class="type__list">
+									<li>RTX 3000 Series</li>
+									<li>RTX 2000 Series</li>
+									<li>RTX 4000 Series</li>
+									<li>RTX A Series</li>
+									<li>RTX 5000 Series</li>
+									<li>RTX ADA Series</li>
+									<li>etc</li>
+								</ul>
+							</dd>
 							<dt class="tab__title title4">
-								<span>TIER 1</span>
+								<span>TIER 4</span>
 								<div>개인 개발자 <strong>mining을 위한 자원</strong></div>
 							</dt>
-							<dd class="tab__content content4">탭4</dd>
+							<dd class="tab__content ">
+								탭4           
+							</dd>
 						</dl>
+					</div>
+
+					<!--  실시간 -->
+					<div class="info--wrap realtime">
+						<h3>실시간 GPU 사용 분석 데이터에 기반하여<br />합리적인 비용 체계를 구축하고<br /> 분석 데이터를 투명하게 공개합니다.</h3>
+						<div class="realtime--wrap">
+							<div class="log-event--wrap">
+								<dl class="log--wrap">
+									<dd>
+										<div class="log__text--wrap">
+											<div class="log__inner">
+												<p>2025/06/08 15:30:27 routes.go : 1259 : INFO server config env=”map[CUDA_VISIBLE_DEVICES:</p>
+												<p>GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION:HTTPS_PROXYL</p>
+												<p>HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false</p>
+												<p>OLLAMA_GPU_OVERHEAD:0 OlLAMA_HOST:http://0.0.0.0:11434 OLLAMA_INTEL_GPU:false</p>
+												<p>OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:</p>
+												<p>OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512</p>
+												<p>OLLAMA_MODELS:/root/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NOHISTORY:false</p>
+												<p>OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[<span>http://localhost</span></p>
+												<p><span>http://localhost http://localhost:* https://localhost:* http:127.0.0.1 https://127.0.0.1</span></p>
+												<p><span>http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:*</span></p>
+												<p><span>http://0.0.0.0*</span> app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false</p>
+												<p>ROCR_VISIBLE_DEVICES: http_proxy:https_proxy: no_proxy:]”</p>
+												<br />
+												<p>time=2025-06-18T15:30:27.553Z level=INFO source=images.go:757 msg=”total blobs: 5”</p>
+												<p>time=2025-06-18T15:30:27.553Z level=INFO source=images.go:757 msg=”total unused blobs removed: 0”</p>
+												<p><span>[GIN-debug]</span> <em>[WARNING]</em> Creating an Engine instance with the Logger and Recovery middleware alreay attached.</p>
+												<br />
+												<p><span>[GIN-debug]</span> <em>[WARNING]</em> Running in “debug” mode. Switch to “release” mode in production.</p>
+												<p>- using env: export GIN_MODE=release</p>
+												<br />
+												<p>2025/06/08 15:30:27 routes.go : 1259 : INFO server config env=”map[CUDA_VISIBLE_DEVICES:</p>
+												<p>GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION:HTTPS_PROXYL</p>
+												<p>HTTP_PROXY: NO_PROXY: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false</p>
+												<p>OLLAMA_GPU_OVERHEAD:0 OlLAMA_HOST:http://0.0.0.0:11434 OLLAMA_INTEL_GPU:false</p>
+												<p>OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:</p>
+												<p>OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512</p>
+												<p>OLLAMA_MODELS:/root/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NOHISTORY:false</p>
+												<p>OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[<span>http://localhost</span></p>
+												<p><span>http://localhost http://localhost:* https://localhost:* http:127.0.0.1 https://127.0.0.1</span></p>
+												<p><span>http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:*</span></p>
+												<p><span>http://0.0.0.0*</span> app://* file://* tauri://* vscode-webview://*] OLLAMA_SCHED_SPREAD:false</p>
+												<p>ROCR_VISIBLE_DEVICES: http_proxy:https_proxy: no_proxy:]”</p>
+												<br />
+												<p>time=2025-06-18T15:30:27.553Z level=INFO source=images.go:757 msg=”total blobs: 5”</p>
+												<p>time=2025-06-18T15:30:27.553Z level=INFO source=images.go:757 msg=”total unused blobs removed: 0”</p>
+												<p><span>[GIN-debug]</span> <em>[WARNING]</em> Creating an Engine instance with the Logger and Recovery middleware alreay attached.</p>
+												<br />
+												<p><span>[GIN-debug]</span> <em>[WARNING]</em> Running in “debug” mode. Switch to “release” mode in production.</p>
+												<p>- using env: export GIN_MODE=release</p>
+											</div>
+										</div>
+									</dd>
+									<dt>
+										<div>컨테이너 로그</div>
+										<p>워크로드 배포 후 실시간 워크로드 운영 로그 조회가 가능합니다.</p>
+									</dt>
+								</dl>
+								<dl class="event--wrap">
+									<dd>
+										<div class="status--wrap">
+											<img class="pc-only" src="assets/images/img_event.png" alt="이벤트컨테이너pc" />
+											<img class="mo-only" src="assets/images/img_event_mo.png" alt="이벤트컨테이너pc" />
+											<div class="warn__layer">
+												<div class="warn__title"><span>WARNING</span></div>
+												<div class="warn__content">Startup probe failed: Get “http://10.249.7.253:15021/healthz/ready”: dial tcp 10.249.7.253:15021: connection refused</div>
+											</div>
+										</div>
+									</dd>
+									<dt>
+										<div>배포 이벤트 현황</div>
+										<p>
+											워크로드 운영 시 상태 변경 내역을 실시간으로 공유합니다.
+											<span>콘솔 알림을 통해서도 제공하여 연결해제나 상태 변경을 즉각 확인하고 필요한 조취를 할 수 있습니다.</span>
+										</p>
+									</dt>
+								</dl>
+							</div>
+							<dl class="monitoring--wrap">
+								<dd>
+									<ul class="monitoring__menu">
+										<li class="active">GPU (%)</li>
+										<li>CPU (%)</li>
+										<li>GPU MEMORY (MB) </li>
+										<li>NETWORK (Kbps)</li>
+									</ul>
+									<ul class="monitoring__content">
+ 										<li class="active"><img src="assets/images/img_monitor1.png" alt="GPU (%)" /></li>
+										<li><img src="assets/images/img_monitor2.png" alt="CPU (%)" /></li>
+										<li><img src="assets/images/img_monitor3.png" alt="GPU MEMORY (MB)" /></li>
+										<li><img src="assets/images/img_monitor4.png" alt="NETWORK (Kbps)" /></li>
+									</ul>
+								</dd>
+								<dt>
+									<div>모니터링</div>
+									<p>워크로드 실행 시 연결된 GPU의 시간별 리소스 사용량을 공개합니다.<br />GPU 비용 산정의 데이터를 사용자와 공유하여 신뢰할 수 있는 서비스를 제공 합니다.</p>
+								</dt>
+							</dl>
+						</div>
+					</div>
+
+					<!-- 문의 -->
+					<ul class="inquiry__list">
+						<li>
+							<a href="javascript:;">
+								<p>필요한 GPU가 있으신가요?</p>
+								<div>상세 스펙의 GPU가 필요한 경우 문의주시면,<br />맞춤형 GPU를 추천해드립니다.</div>
+								<span>GPU 예약 문의하기</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p>공유할 GPU가 있으신가요?</p>
+								<div>대량 공급 상담이나 GPU 공유 관련 기술지원이<br />필요하다면 지금 문의주세요.</div>
+								<span>GPU 공급 문의하기</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- blog swiper -->
+					<div class="info--wrap blog">
+						<h3>gcube Blog</h3>
+						<div class="swiper blogSwiper">
+							<ul class="swiper-wrapper blog__list">
+								<li class="swiper-slide">
+									<div class="img--wrap">
+										<span><img src="assets/images/img_blog1.png" alt="블로그이미지" /></span>
+									</div>
+									<div class="blog__title">gcube:지큐브에서 주목하는 AI  기술 TOP 3 (예시)</div>
+									<div class="blog__text">AI 기술, 정말 빠르게 발전하고 있죠? gcube:지큐브도 이 흐름 속에서 실제 도입 가능성과 실용성을 중심으로 주요 AI 기술을 검토하고 있습니다</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img--wrap">
+										<span><img src="assets/images/img_blog2.png" alt="블로그이미지" /></span>
+									</div>
+									<div class="blog__title">블로그의 타이틀이 2줄 이내로 노출되는 영역입니다. 블로그의 타이틀이 2줄 이내로 노출되는 영역입니다.</div>
+									<div class="blog__text">AI 기술, 정말 빠르게 발전하고 있죠? gcube:지큐브도 이 흐름 속에서 실제 도입 가능성과 실용성을 중심으로 주요 AI 기술을 검토하고 있습니다</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img--wrap">
+										<span><img src="assets/images/img_blog3.png" alt="블로그이미지" /></span>
+									</div>
+									<div class="blog__title">gcube:지큐브에서 주목하는 AI  기술 TOP 3 (예시)</div>
+									<div class="blog__text">AI 기술, 정말 빠르게 발전하고 있죠? gcube:지큐브도 이 흐름 속에서 실제 도입 가능성과 실용성을 중심으로 주요 AI 기술을 검토하고 있습니다</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img--wrap">
+										<span><img src="assets/images/img_blog4.png" alt="블로그이미지" /></span>
+									</div>
+									<div class="blog__title">gcube:지큐브에서 주목하는 AI  기술 TOP 3 (예시)</div>
+									<div class="blog__text">AI 기술, 정말 빠르게 발전하고 있죠? gcube:지큐브도 이 흐름 속에서 실제 도입 가능성과 실용성을 중심으로 주요 AI 기술을 검토하고 있습니다</div>
+								</li>
+							</ul>
+							<div class="swiper-pagination"></div>
+						</div>
+						<script>
+							let blogSwiper = null;
+							let activeTimer2 = null;
+							let activeIndex2 = 0;
+							function addActiveAnimation2() {
+							  const slides = document.querySelectorAll('.blogSwiper .swiper-slide');
+							  if (slides.length === 0) return;
+							  slides.forEach(el => el.classList.remove('active'));
+							  slides[0].classList.add('active');
+							  activeIndex2 = 0;
+							  activeTimer2 = setInterval(() => {
+								slides[activeIndex2].classList.remove('active');
+								activeIndex2 = (activeIndex2 + 1) % slides.length;
+								slides[activeIndex2].classList.add('active');
+							  }, 4000);
+							}
+							function removeActiveAnimation() {
+							  clearInterval(activeTimer2);
+							  const slides = document.querySelectorAll('.blogSwiper .swiper-slide');
+							  slides.forEach(el => el.classList.remove('active'));
+							  activeIndex2 = 0;
+							}
+							function enableSwiper() {
+							  if (!blogSwiper) {
+								blogSwiper = new Swiper(".blogSwiper", {
+								  pagination: {
+									el: ".blogSwiper .swiper-pagination",
+										clickable: true,
+								  },
+								  autoplay: {
+										delay: 4000,
+										disableOnInteraction: false,
+								  },
+									spaceBetween: 16,
+								});
+							  }
+							}
+							function disableSwiper() {
+							  if (blogSwiper) {
+								blogSwiper.destroy(true, true);
+								blogSwiper = null;
+							  }
+							}
+							function handleResponsiveSwiper() {
+							  if (window.innerWidth <= 767) {
+								enableSwiper();
+							  } else {
+								disableSwiper();
+								removeActiveAnimation();
+								addActiveAnimation();
+							  }
+							}
+							handleResponsiveSwiper();
+							window.addEventListener('resize', handleResponsiveSwiper);
+							window.addEventListener('beforeunload', removeActiveAnimation);
+						</script>
+					</div>
+
+					<!-- faq -->
+					<div class="info--wrap faq">
+						<h3>FAQ</h3>
+						<ul class="faq__list">
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">gcube의 결제 수단에는 어떤 것들이 가능한가요?</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다.<br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다. 이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">GPU 공유에 필요한 부분은 있나요?GPU 공유에 필요한 부분은 있나요?GPU 공유에 필요한 부분은 있나요?GPU 공유에 필요한 부분은 있나요?GPU 공유에 필요한 부분은 있나요?</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다.<br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다. 이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">gcube를 사용하면, 얼마나 많은 비용을 절감할 수 있나요?</dt>
+									<dd class="tab__content">
+										컨텐츠
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">GPU 공유에 필요한 부분은 있나요?</dt>
+									<dd class="tab__content">
+										컨텐츠 
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+
+					<!-- partner -->
+					<div class="info--wrap partners">
+						<h3>gcube Partners</h3>
+						<div class="swiper partner-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="assets/images/logo_partner1.png" alt="NAVER Cloud"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner2.png" alt="KAIST"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner3.png" alt="NHN CLOUD"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner4.png" alt="용인대학교"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner5.png" alt="soundmind"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner6.png" alt="KT cloud"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner7.png" alt="TOONSQAURE"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner8.png" alt="한국전자통신연구원"></div>
+								<div class="swiper-slide"><img src="assets/images/logo_partner9.png" alt="고려대학교"></div>
+							</div>
+						</div>
+						<script>
+							document.addEventListener('DOMContentLoaded', () => {
+								const partnerSwiper = new Swiper('.partner-swiper', {
+									loop: true,
+									speed: 4000,
+									autoplay: {
+										delay: 0,
+										disableOnInteraction: false,
+										pauseOnMouseEnter: false,
+									},
+									slidesPerView: 'auto',
+									freeMode: true,
+									allowTouchMove: false,
+								});
+								partnerSwiper.slides.forEach(slide => {
+									slide.addEventListener('click', () => {
+										if (!partnerSwiper.autoplay.running) {
+											partnerSwiper.autoplay.start();
+										}
+									});
+								});
+							});
+						</script>
 					</div>
 				</div>
 			</div>
-			<div class="main__content main__content3"><h2>섹션3</h2><h3>섹션3</h3></div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- 공통dim -->
@@ -372,6 +1046,7 @@
 			const contents = Array.from(document.querySelectorAll('[class^=main__content]'));
 			const visual = document.querySelector('.visual');
 			const mainContainer = document.querySelector('.main__container');
+			const footer = document.querySelector('.footer');
 			let vh, heights, stickPoints;
 			let lastFixedIndex = -1;
 			function calculateMetrics() {
@@ -389,11 +1064,15 @@
 			  const maxFixIndex = contents.length - 2;
 			  let paddingTopTarget = vh;
 			  if (scrollY + vh >= stickPoints[0] + heights[0]) {
-				paddingTopTarget += heights[0];
-				if (scrollY + vh >= stickPoints[1] + heights[1]) {
-				  paddingTopTarget += heights[1];
-				}
+					paddingTopTarget += heights[0];
+					if (scrollY + vh >= stickPoints[1] + heights[1]) {
+						paddingTopTarget += heights[1];
+					}
 			  }
+				if (footer) {
+					const footerHeight = footer.offsetHeight;
+					paddingTopTarget = Math.max(paddingTopTarget - footerHeight, vh);
+				}
 			  mainContainer.style.paddingTop = `${paddingTopTarget}px`;
 			  for (let i = 0; i <= maxFixIndex; i++) {
 				if (scrollY + vh >= stickPoints[i] + heights[i]) {
@@ -408,11 +1087,13 @@
 			  }
 			}
 			calculateMetrics();
+			onScroll();
 			window.addEventListener('scroll', onScroll);
 			window.addEventListener('resize', () => {
 			  calculateMetrics();
 			  onScroll();
 			});
+
 			// GPU견적 comparison--wrap
 			const btnOption = document.querySelector('.btn__option');
 			const optionList = document.querySelector('.option__list');
@@ -434,6 +1115,7 @@
 				btnOption.classList.remove('is-active');
 				if (input) input.checked = true;
 			});
+
 			// GPU견적 그래프모션 graph--wrap
 			const maxPrice = 140000;
 			const listItems = document.querySelectorAll('.graph--wrap .graph__list li');
@@ -458,16 +1140,28 @@
 					const reductionAmount = otherPrice - minePrice;
 					const strongEl = li.querySelector('.reduction__title strong');
 					const spanEl = li.querySelector('.reduction__title em');
-
 					if (strongEl) strongEl.textContent = reductionPercent + '%';
 					if (spanEl) spanEl.textContent = reductionAmount.toLocaleString() + '원';
 				});
+			}
+			function runSequentialOnClass() {
+				const items = document.querySelectorAll('.graph--wrap .graph__list li');
+				let index = 0;
+				const delay = 2000; // 2초
+				function loop() {
+					items.forEach(li => li.classList.remove('on'));
+					items[index].classList.add('on');
+					index = (index + 1) % items.length;
+					setTimeout(loop, delay);
+				}
+				loop();
 			}
 			function checkEfficiencySection() {
 				const rect = efficiencySection.getBoundingClientRect();
 				if (rect.top <= windowMiddle && rect.bottom >= windowMiddle) {
 					setBarHeights();
 					efficiencySection.classList.add('active');
+					setTimeout(runSequentialOnClass, 2000);
 					window.removeEventListener('scroll', checkEfficiencySection);
 				}
 			}
@@ -477,6 +1171,76 @@
 			});
 			window.addEventListener('scroll', checkEfficiencySection);
 			checkEfficiencySection();
+
+			// 프로그램로그 모션 log--wrap
+			const inner = document.querySelector(".log__inner");
+			const lines = inner.querySelectorAll("p");
+			let currentLine = 0;
+			const lineHeight = lines[0].offsetHeight;
+			const totalLines = lines.length;
+			const scrollInterval = 1000;
+			let timer = null;
+			function startScroll() {
+				timer = setInterval(() => {
+					if (currentLine < totalLines - 1) {
+						currentLine++;
+						inner.style.transform = `translateY(-${lineHeight * currentLine}px)`;
+					} else {
+						clearInterval(timer);
+						setTimeout(() => {
+							resetScroll();
+							startScroll();
+						}, 15000);
+					}
+				}, scrollInterval);
+			}
+			function resetScroll() {
+				currentLine = 0;
+				inner.style.transition = "none"; 
+				inner.style.transform = `translateY(0)`;
+				setTimeout(() => {
+					inner.style.transition = "transform 0.5s linear";
+				}, 50);
+			}
+			startScroll();
+
+			// 모니터링 모션 monitoring--wrap
+			const menuItems = document.querySelectorAll(".monitoring__menu li");
+			const contentItems = document.querySelectorAll(".monitoring__content li");
+			let currentIndex = 0;
+			let timerId = null;
+			const delay = 2000;
+			function showIndex(index) {
+				menuItems.forEach((item, i) => {
+					item.classList.toggle("active", i === index);
+				});
+				contentItems.forEach((item, i) => {
+					item.classList.toggle("active", i === index);
+				});
+				currentIndex = index;
+			}
+			function startAutoPlay(startIndex) {
+				stopAutoPlay();
+				let idx = startIndex;
+				timerId = setInterval(() => {
+					idx = (idx + 1) % menuItems.length;
+					showIndex(idx);
+				}, delay);
+			}
+			function stopAutoPlay() {
+				if (timerId) {
+					clearInterval(timerId);
+					timerId = null;
+				}
+			}
+			showIndex(0);
+			startAutoPlay(0);
+			menuItems.forEach((menu, index) => {
+				menu.addEventListener("click", () => {
+					showIndex(index);
+					startAutoPlay(index);
+				});
+			});
 		});
 	</script>
 </body>

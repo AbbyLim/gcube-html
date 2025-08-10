@@ -62,11 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	const tabWraps = document.querySelectorAll('.tab--wrap');
   tabWraps.forEach(tabWrap => {
     const isAccordion = tabWrap.classList.contains('accordion');
+    const isFaq = tabWrap.classList.contains('faq--wrap');
     const tabTitles = tabWrap.querySelectorAll('.tab__title');
     tabTitles.forEach(title => {
       title.addEventListener('click', () => {
         const windowWidth = window.innerWidth;
-        if (isAccordion && windowWidth < 1920) {
+        if ((isAccordion && windowWidth < 1920) || isFaq) {
           if (title.classList.contains('is-active')) {
             title.classList.remove('is-active');
             return;
