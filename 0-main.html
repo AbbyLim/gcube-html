@@ -791,13 +791,13 @@
 								slides[activeIndex2].classList.add('active');
 							  }, 4000);
 							}
-							function removeActiveAnimation() {
+							function removeActiveAnimation2() {
 							  clearInterval(activeTimer2);
 							  const slides = document.querySelectorAll('.blogSwiper .swiper-slide');
 							  slides.forEach(el => el.classList.remove('active'));
 							  activeIndex2 = 0;
 							}
-							function enableSwiper() {
+							function enableSwiper2() {
 							  if (!blogSwiper) {
 								blogSwiper = new Swiper(".blogSwiper", {
 								  pagination: {
@@ -812,24 +812,24 @@
 								});
 							  }
 							}
-							function disableSwiper() {
+							function disableSwiper2() {
 							  if (blogSwiper) {
 								blogSwiper.destroy(true, true);
 								blogSwiper = null;
 							  }
 							}
-							function handleResponsiveSwiper() {
+							function handleResponsiveSwiper2() {
 							  if (window.innerWidth <= 767) {
-								enableSwiper();
+								enableSwiper2();
 							  } else {
-								disableSwiper();
-								removeActiveAnimation();
-								addActiveAnimation();
+								disableSwiper2();
+								removeActiveAnimation2();
+								addActiveAnimation2();
 							  }
 							}
-							handleResponsiveSwiper();
-							window.addEventListener('resize', handleResponsiveSwiper);
-							window.addEventListener('beforeunload', removeActiveAnimation);
+							handleResponsiveSwiper2();
+							window.addEventListener('resize', handleResponsiveSwiper2);
+							window.addEventListener('beforeunload', removeActiveAnimation2);
 						</script>
 					</div>
 
