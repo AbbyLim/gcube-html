@@ -583,6 +583,120 @@
 							</dt>
 							<dd class="tab__content">
 								<ul class="hashtag__list">
+									<li>안정적 네트워크</li>
+									<li>고사양</li>
+									<li>맞춤형</li>
+								</ul> 
+								<h3>직접 계약을 통해 제공하는 전용 서버 GPU</h3>
+								<ul class="product__list">
+									<li>
+										<h4>RTX 5090 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 4090 / 24GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 4080 / 32GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+									<li>
+										<h4>RTX 3060 / 24GB x 1</h4>
+										<div class="product__spec">
+											<dl>
+												<dt>vCPU</dt>
+												<dd>26</dd>
+											</dl>
+											<dl>
+												<dt>RAM</dt>
+												<dd>200GB</dd>
+											</dl>
+											<dl>
+												<dt>Storage</dt>
+												<dd>1000GB</dd>
+											</dl>
+											<dl>
+												<dt>Network</dt>
+												<dd>882MB</dd>
+											</dl>
+										</div>
+										<div class="product__price">
+											<strong>910원 ~ 1,300원</strong>
+											<span>/hr</span>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<dt class="tab__title title4">
+								<span>TIER 4</span>
+								<div>개인 개발자 <strong>mining을 위한 자원</strong></div>
+							</dt>
+							<dd class="tab__content">
+								<ul class="hashtag__list">
 									<li>저렴한</li>
 									<li>다양한</li>
 									<li>탄력적</li>
@@ -611,13 +725,6 @@
 									<li>RTX ADA Series</li>
 									<li>etc</li>
 								</ul>
-							</dd>
-							<dt class="tab__title title4">
-								<span>TIER 4</span>
-								<div>개인 개발자 <strong>mining을 위한 자원</strong></div>
-							</dt>
-							<dd class="tab__content ">
-								탭4           
 							</dd>
 						</dl>
 					</div>
@@ -1042,58 +1149,6 @@
 	</div>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// 메인 레이아웃
-			const contents = Array.from(document.querySelectorAll('[class^=main__content]'));
-			const visual = document.querySelector('.visual');
-			const mainContainer = document.querySelector('.main__container');
-			const footer = document.querySelector('.footer');
-			let vh, heights, stickPoints;
-			let lastFixedIndex = -1;
-			function calculateMetrics() {
-			  vh = window.innerHeight;
-			  heights = contents.map(c => c.clientHeight);
-			  stickPoints = [];
-			  let accum = vh;
-			  for (let i = 0; i < contents.length; i++) {
-				stickPoints.push(accum);
-				accum += heights[i];
-			  }
-			}
-			function onScroll() {
-			  const scrollY = window.scrollY;
-			  const maxFixIndex = contents.length - 2;
-			  let paddingTopTarget = vh;
-			  if (scrollY + vh >= stickPoints[0] + heights[0]) {
-					paddingTopTarget += heights[0];
-					if (scrollY + vh >= stickPoints[1] + heights[1]) {
-						paddingTopTarget += heights[1];
-					}
-			  }
-				if (footer) {
-					const footerHeight = footer.offsetHeight;
-					paddingTopTarget = Math.max(paddingTopTarget - footerHeight, vh);
-				}
-			  mainContainer.style.paddingTop = `${paddingTopTarget}px`;
-			  for (let i = 0; i <= maxFixIndex; i++) {
-				if (scrollY + vh >= stickPoints[i] + heights[i]) {
-				  if (lastFixedIndex <= i) {
-					contents[i].classList.add('content-fixed');
-					lastFixedIndex = i;
-				  }
-				} else if (scrollY + vh < stickPoints[i] + heights[i] && i <= lastFixedIndex) {
-				  contents[i].classList.remove('content-fixed');
-				  lastFixedIndex = i - 1;
-				}
-			  }
-			}
-			calculateMetrics();
-			onScroll();
-			window.addEventListener('scroll', onScroll);
-			window.addEventListener('resize', () => {
-			  calculateMetrics();
-			  onScroll();
-			});
-
 			// GPU견적 comparison--wrap
 			const btnOption = document.querySelector('.btn__option');
 			const optionList = document.querySelector('.option__list');
@@ -1182,21 +1237,25 @@
 			let timer = null;
 			function startScroll() {
 				timer = setInterval(() => {
-					if (currentLine < totalLines - 1) {
-						currentLine++;
-						inner.style.transform = `translateY(-${lineHeight * currentLine}px)`;
-					} else {
+					const maxTranslate = inner.clientHeight - inner.parentElement.clientHeight;
+					let translateY = lineHeight * (currentLine + 1);
+					if (translateY >= maxTranslate) {
+						inner.style.transform = `translateY(-${maxTranslate}px)`;
 						clearInterval(timer);
+						timer = null;
 						setTimeout(() => {
 							resetScroll();
 							startScroll();
-						}, 15000);
+						}, 1000);
+					} else {
+						currentLine++;
+						inner.style.transform = `translateY(-${translateY}px)`;
 					}
 				}, scrollInterval);
 			}
 			function resetScroll() {
 				currentLine = 0;
-				inner.style.transition = "none"; 
+				inner.style.transition = "none";
 				inner.style.transform = `translateY(0)`;
 				setTimeout(() => {
 					inner.style.transition = "transform 0.5s linear";

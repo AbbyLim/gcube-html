@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="assets/images/img.png">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:description" content="AI 학습과 추론에 필수인 GPU! 지큐브에 무엇이든 물어보세요. NVIDIA GPU를 합리적인 가격으로 원할 때 사용 가능합니다.">
+	<meta property="og:site_name" content="지큐브">
+	<meta property="og:locale" content="en_US">
+	<title>지큐브</title> 
+	<link rel="shortcut icon" href="assets/favi/favicon.ico">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 공통헤더 -->
+		<div class="header">
+			<div class="inner">
+				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
+				<div class="gnb">
+					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+				</div>
+			</div>
+		</div>
+		<!-- //공통헤더 -->
+
+		<!-- PRICE1 -->
+		<div class="container">
+			<div class="inner">
+				<div class="content">
+					<h2>Price</h2>
+					<p class="h2__description">필요한 GPU를 합리적인 가격에 제공합니다.</p>
+					<div class="price__container">
+						<!-- 추천 swiper -->
+						<div class="swiper bestSwiper">
+							<ul class="swiper-wrapper best__list">
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>RTX 4090</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>RTX 5090</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>H100</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+							</ul>
+							<div class="swiper-pagination"></div>
+						</div>
+						<script>
+							let bestSwiper = null;
+							function enableSwiper() {
+								if (!bestSwiper) {
+								bestSwiper = new Swiper(".bestSwiper", {
+									pagination: {
+									el: ".bestSwiper .swiper-pagination",
+										clickable: true,
+									},
+									autoplay: {
+										delay: 4000,
+										disableOnInteraction: false,
+									},
+									spaceBetween: 8,
+								});
+								}
+							}
+							function disableSwiper() {
+								if (bestSwiper) {
+								bestSwiper.destroy(true, true);
+								bestSwiper = null;
+								}
+							}
+							function handleResponsiveSwiper() {
+								if (window.innerWidth <= 720) {
+								enableSwiper();
+								} else {
+								disableSwiper();
+								}
+							}
+							handleResponsiveSwiper();
+							window.addEventListener('resize', handleResponsiveSwiper);
+						</script>
+
+						<!-- 비용계산/가격표 -->						
+						<div class="cost__link">
+							<a href="javascript:;" class="current">비용</a>
+							<a href="1-price_2.html">가격표</a>
+						</div>
+						<!-- 비용계산 -->
+						<div class="cost--wrap">
+							<h4>필요한 GPU를 선택하여 실제로 발생하는 월 예상 비용을 확인할 수 있습니다.</h4>
+							<div class="step--wrap">
+								<div class="step__item step1">
+									<h5>
+										<strong>GPU 모델을 선택해주세요.</strong>
+										<span>Step 1</span>
+									</h5>
+
+									<!-- pc/태블릿에서만 사용 -->
+									<div class="step__item-swip er--wrap">
+										<div class="swiper parent-swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">RTX 5000 Series</div>
+												<div class="swiper-slide">RTX 4000 Series</div>
+												<div class="swiper-slide">RTX 3000 Series</div>
+												<div class="swiper-slide">H100</div>
+												<div class="swiper-slide">RTX 0000 Series</div>
+												<div class="swiper-slide">RTX 0000 Series</div>
+												<div class="swiper-slide">RTX 0000 Series</div>
+												<div class="swiper-slide">RTX 0000 Series</div> 
+											</div>
+										</div>
+										<div class="child-swiper--wrap">
+											<!-- RTX 5000 Series -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">RTX 4090</div>
+													<div class="swiper-slide">RTX 4080</div>
+													<div class="swiper-slide">RTX 4070</div>
+													<div class="swiper-slide">RTX 4060</div>
+												</div>
+											</div>
+											<!-- RTX 4000 Series -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">RTX 4090</div>
+													<div class="swiper-slide">RTX 4080</div>
+													<div class="swiper-slide">RTX 4070</div>
+													<div class="swiper-slide">RTX 4060</div>
+													<div class="swiper-slide">RTX 4050</div>
+													<div class="swiper-slide">RTX 4040</div>
+													<div class="swiper-slide">RTX 4030</div>
+												</div>
+											</div>
+											<!-- RTX 3000 Series -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">RTX 3090</div>
+													<div class="swiper-slide">RTX 3080</div>
+													<div class="swiper-slide">RTX 3070</div>
+												</div>
+											</div>
+											<!-- 자식: 콘텐츠 Swiper (4번) -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">컨텐츠 4-1 내용</div>
+													<div class="swiper-slide">컨텐츠 4-2 내용</div>
+													<div class="swiper-slide">컨텐츠 4-3 내용</div>
+												</div>
+											</div>
+											<!-- 자식: 콘텐츠 Swiper (5번) -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">컨텐츠 5-1 내용</div>
+													<div class="swiper-slide">컨텐츠 5-2 내용</div>
+													<div class="swiper-slide">컨텐츠 5-3 내용</div>
+												</div>
+											</div>
+											<!-- 자식: 콘텐츠 Swiper (6번) -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">컨텐츠 6-1 내용</div>
+													<div class="swiper-slide">컨텐츠 6-2 내용</div>
+												</div>
+											</div>
+											<!-- 자식: 콘텐츠 Swiper (7번) -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">컨텐츠 7-1 내용</div>
+													<div class="swiper-slide">컨텐츠 7-2 내용</div>
+												</div>
+											</div>
+											<!-- 자식: 콘텐츠 Swiper (8번) -->
+											<div class="swiper child-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">컨텐츠 8-1 내용</div>
+													<div class="swiper-slide">컨텐츠 8-2 내용</div>
+												</div>
+											</div>
+											<script>
+												const parentSwiper = new Swiper('.parent-swiper', {
+													direction: 'vertical',
+													slidesPerView: 'auto',
+													freeMode: true,
+													loop: false,
+													spaceBetween: 12,
+													slideToClickedSlide: false,
+												});
+
+												const childContainers = document.querySelectorAll('.child-swiper');
+												const childSwipers = [];
+
+												childContainers.forEach((container, i) => {
+													childSwipers[i] = new Swiper(container, {
+														direction: 'vertical',
+														slidesPerView: 'auto',
+														freeMode: true,
+														loop: false,
+														spaceBetween: 12,
+													});
+												});
+
+												function showChildSwiper(index) {
+													childContainers.forEach((container, i) => {
+														const isCurrent = i === index;
+														container.classList.toggle('is-visible', isCurrent);
+
+														if (!isCurrent) {
+															// 🔹 is-visible이 제거될 때 해당 자식의 is-active 초기화
+															container.querySelectorAll('.swiper-slide').forEach(slide => {
+																slide.classList.remove('is-active');
+															});
+														}
+													});
+												}
+
+												showChildSwiper(0);
+
+												const parentSlides = document.querySelectorAll('.parent-swiper .swiper-slide');
+												if (parentSlides.length > 0) {
+													parentSlides[0].classList.add('is-active');
+												}
+
+												// 🔹 부모 슬라이드 클릭 시
+												parentSlides.forEach((slide, i) => {
+													slide.addEventListener('click', () => {
+														// 부모의 is-active 변경
+														parentSlides.forEach(s => s.classList.remove('is-active'));
+														slide.classList.add('is-active');
+
+														// 해당하는 자식 Swiper 표시
+														showChildSwiper(i);
+														parentSwiper.slideTo(i);
+													});
+												});
+
+												// 🔹 자식 스와이프 각 개별 클릭 이벤트 (is-visible일 때만)
+												childContainers.forEach(container => {
+													const slides = container.querySelectorAll('.swiper-slide');
+													slides.forEach(slide => {
+														slide.addEventListener('click', () => {
+															if (container.classList.contains('is-visible')) {
+																// 현재 보이는 자식 Swiper에서 is-active 토글
+																slides.forEach(s => s.classList.remove('is-active'));
+																slide.classList.add('is-active');
+															}
+														});
+													});
+												});
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="step__inner">
+									<div class="step__item step2">
+										<h5>
+											<strong>성능을 선택해주세요.</strong>
+											<span>Step 2</span>
+										</h5>
+										<ul class="select__list">
+											<li>
+												<label>
+													<input type="radio" name="performance" />
+													<span>vRAM 24GB / Storage 937GB</span>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input type="radio" name="performance" />
+													<span>vRAM 8GB / Storage 937GB</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="step__item step3">
+										<h5>
+											<strong>사용 유형을 선택해주세요.</strong>
+											<span>Step 3</span>
+										</h5>
+										<ul class="select__list">
+											<li>
+												<label>
+													<input type="radio" name="useType" />
+													<span>안정적 사용</span>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input type="radio" name="useType" />
+													<span>경제적 사용</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
+	</div>
+</body>
+</html>

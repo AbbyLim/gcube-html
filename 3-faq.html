@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="assets/images/img.png">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:description" content="AI 학습과 추론에 필수인 GPU! 지큐브에 무엇이든 물어보세요. NVIDIA GPU를 합리적인 가격으로 원할 때 사용 가능합니다.">
+	<meta property="og:site_name" content="지큐브">
+	<meta property="og:locale" content="en_US">
+	<title>지큐브</title> 
+	<link rel="shortcut icon" href="assets/favi/favicon.ico">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 공통헤더 -->
+		<div class="header">
+			<div class="inner">
+				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
+				<div class="gnb">
+					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+				</div>
+			</div>
+		</div>
+		<!-- //공통헤더 -->
+
+		<!-- FAQ -->
+		<div class="container">
+			<div class="inner">
+				<div class="content">
+					<h2>FAQ</h2>
+					<p class="h2__description">Gcube에 자주 묻는 질문을 확인해보세요.</p>
+					<div class="faq__container">
+						<div class="filter--wrap">
+							<div class="search--wrap">
+								<input type="text" placeholder="검색어를 입력해주세요" class="input__search" />
+								<div class="search__layer">
+									<ul>
+										<li class="nodata">검색어와 일치하는 항목이 없습니다.</li>
+										<li>지큐브의 결제 수단에는 어떤 것들이 가능한가요?</li>
+										<li>PayPal로 결제할 수 있나요?</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter__list--wrap">
+								<ul class="filter__list">
+									<li>
+										<label>
+											<input type="radio" name="faqSort" checked />
+											<span>ALL</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="faqSort" />
+											<span>회원</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="faqSort" />
+											<span>워크로드</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="faqSort" />
+											<span>노드</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="faqSort" />
+											<span>포인트</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="faqSort" />
+											<span>기타</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="faq__list">
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">
+										<span class="category">워크로드</span>
+										<p>지큐브 의 결제 수단에는 어떤 것들이 가능한가요?</p>
+									</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다.<br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다. 이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">
+										<span class="category">워크로드</span>
+										<p>GPU 공유에 필요한 부분은 있나요? GPU 공유에 필요한 부분은 있나요? GPU 공유에 필요한 부분은 있나요? GPU 공유에 필요한 부분은 있나요? GPU 공유에 필요한 부분은 있나요?</p>
+									</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다. <br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다.<br />
+										이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">
+										<span class="category">기타</span>
+										<p>PayPal로 결제할 수 있나요?</p>
+									</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다. <br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다.<br />
+										이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="tab--wrap faq--wrap">
+									<dt class="tab__title">
+										<span class="category">회원</span>
+										<p>gcube 가입은 어떻게 해야 하나요?</p>
+									</dt>
+									<dd class="tab__content">
+										GPU를 공유하기 위해서는 지큐브 웹사이트를 통해 먼저 회원 가입을 진행해 주셔야 합니다. <br />
+										이후 노드에서 에이전트 설치로 이동하여, 에이전트를 다운 받으시고 설치를 진행 합니다.<br />
+										이후 설치된 에이전트를 실행해 주시면 GPU 공유가 가능합니다.
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
+	</div>
+</body>
+</html>
