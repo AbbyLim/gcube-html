@@ -234,6 +234,9 @@ label:hover {cursor:pointer;}
 @media (max-width:767px) {
 	.faq__container {padding:0;}
 	.faq__container .filter--wrap {margin-top:16px;}
+	.faq__container .filter--wrap .search--wrap {height:48px;}
+	.faq__container .filter--wrap .search--wrap .input__search {height:48px;font-size:14px;}
+	.faq__container .filter--wrap .search--wrap .input__search::placeholder {font-size:14px;}
 	.faq__container .filter--wrap .filter__list--wrap {padding-top:32px;margin:0 -16px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling: touch;-ms-overflow-style: none;scrollbar-width:none;}
 	.faq__container .filter--wrap .filter__list--wrap .filter__list {margin-left:16px;box-sizing:border-box;display:flex;flex-wrap:nowrap;font-size:0;overflow:hidden;white-space:nowrap;width:-moz-max-content;width:max-content;-ms-overflow-style:none;scrollbar-width:none;}
 	.faq__container .filter--wrap .filter__list--wrap .filter__list li + li {margin-left:12px;}
