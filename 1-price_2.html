@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="assets/images/img.png">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:description" content="AI 학습과 추론에 필수인 GPU! 지큐브에 무엇이든 물어보세요. NVIDIA GPU를 합리적인 가격으로 원할 때 사용 가능합니다.">
+	<meta property="og:site_name" content="지큐브">
+	<meta property="og:locale" content="en_US">
+	<title>지큐브</title> 
+	<link rel="shortcut icon" href="assets/favi/favicon.ico">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 공통헤더 -->
+		<div class="header">
+			<div class="inner">
+				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
+				<div class="gnb">
+					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+				</div>
+			</div>
+		</div>
+		<!-- //공통헤더 -->
+
+		<!-- PRICE2 -->
+		<div class="container">
+			<div class="inner">
+				<div class="content">
+					<h2>Price</h2>
+					<p class="h2__description">필요한 GPU를 합리적인 가격에 제공합니다.</p>
+					<div class="price__container">
+						<!-- 추천 swiper -->
+						<div class="swiper bestSwiper">
+							<ul class="swiper-wrapper best__list">
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>RTX 4090</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>RTX 5090</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<p>Best</p>
+									<h4>H100</h4>
+									<div class="product__spec">
+										<dl>
+											<dt>vCPU</dt>
+											<dd>26</dd>
+										</dl>
+										<dl>
+											<dt>RAM</dt>
+											<dd>200GB</dd>
+										</dl>
+										<dl>
+											<dt>Storage</dt>
+											<dd>1000GB</dd>
+										</dl>
+									</div>
+									<div class="product__price">
+										<strong>910원 ~ 1,300원</strong>
+										<span>/hr</span>
+									</div>
+								</li>
+							</ul>
+							<div class="swiper-pagination"></div>
+						</div>
+						<script>
+							let bestSwiper = null;
+							function enableSwiper() {
+								if (!bestSwiper) {
+								bestSwiper = new Swiper(".bestSwiper", {
+									pagination: {
+									el: ".bestSwiper .swiper-pagination",
+										clickable: true,
+									},
+									autoplay: {
+										delay: 4000,
+										disableOnInteraction: false,
+									},
+									spaceBetween: 8,
+								});
+								}
+							}
+							function disableSwiper() {
+								if (bestSwiper) {
+								bestSwiper.destroy(true, true);
+								bestSwiper = null;
+								}
+							}
+							function handleResponsiveSwiper() {
+								if (window.innerWidth <= 720) {
+								enableSwiper();
+								} else {
+								disableSwiper();
+								}
+							}
+							handleResponsiveSwiper();
+							window.addEventListener('resize', handleResponsiveSwiper);
+						</script>
+
+						<!-- 비용계산/가격표 -->						
+						<div class="cost__link">
+							<a href="1-price.html">비용</a>
+							<a href="javascript:;" class="current">가격표</a>
+						</div>
+						<!-- 가격표 -->
+						<div class="price__table--wrap">
+							<div class="filter--wrap">
+								<dl class="search--wrap">
+									<dt>GPU 모델명</dt>
+									<dd><input type="text" placeholder="GPU 모델명를 입력해주세요" class="input__search" /></dd>
+								</dl>
+								<button type="button" class="btn__filter" onclick="modalOpen(this)" data-link="#fiter-layer"><span>필터</span></button>
+								<div class="filter-layer" id="fiter-layer">
+									<dl class="storage">
+										<dt>vRAM</dt>
+										<dd><input type="text" placeholder="용량을 입력해주세요." class="input__search" /></dd>
+									</dl>
+									<dl class="cost">
+										<dt>비용</dt>
+										<dd>
+											<input type="text" placeholder="시간당 최소 금액" class="input__search" />
+											<span class="dash">-</span>
+											<input type="text" placeholder="시간당 최대 금액" class="input__search" />
+										</dd>
+									</dl>
+									<div class="btn--wrap">
+										<button type="buitton" class="btn__reset">초기화</button>
+										<button type="buitton" class="btn__confirm">검색하기</button>
+									</div>
+									<button type="button" class="btn__close" onclick="modalClose(this)"><span class="blind">필터닫기</span></button>
+								</div>
+								<button type="button" class="btn__search"><span class="blind">검색</span></button>
+							</div>
+							<ul class="faq__list">
+								<li>
+									<dl class="tab--wrap faq--wrap">
+										<dt class="tab__title is-active">
+											<p>NVDIA RTX 5000 Series</p>
+										</dt>
+										<dd class="tab__content">
+											<div class="price__item--wrap">
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="tab--wrap faq--wrap">
+										<dt class="tab__title">
+											<p>NVDIA RTX 4000 Series</p>
+										</dt>
+										<dd class="tab__content">
+											<div class="price__item--wrap">
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+												<div class="price__item">
+													<h4>
+														<span>TIER</span>
+														<strong>RTX 4090</strong>
+													</h4>
+													<div class="product__spec">
+														<dl>
+															<dt>vCPU</dt>
+															<dd>26</dd>
+														</dl>
+														<dl>
+															<dt>RAM</dt>
+															<dd>200GB</dd>
+														</dl>
+														<dl>
+															<dt>Storage</dt>
+															<dd>1000GB</dd>
+														</dl>
+													</div>
+													<div class="product__price">
+														<strong>910원 ~ 1,300원</strong>
+														<span>/hr</span>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!-- 비용 안내사항 -->
+						<ul class="info__list">
+							<li>* 표기된 최소 비용은 기본부과 비용이며, 사용 비율에 따라 최대 100% 사용 시 최대 비용이 부과됩니다.</li>
+							<li>* GPU 스펙은 최저 사양으로 기재되어,  실제  사용 시 제공되는 GPU 성능은 기재된 내용과 상이할 수 있습니다.</li>
+							<li>* 제공GPU 종류를 시기에 따라 변경되어지며, 가격표에 명시되지 않은 GPU도 실제 워크로드 연결 시 조회될 수 있습니다. 제공 여부 확인이 필요한 경우 문의주시기 바랍니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
+	</div>
+</body>
+</html>

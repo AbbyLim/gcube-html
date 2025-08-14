@@ -12,34 +12,51 @@ document.addEventListener("DOMContentLoaded", function () {
   function modalOpen(obj) {
     var pops = obj.getAttribute("data-link");
     var popup = document.querySelector(pops);
-    if (popup) {
-      popup.style.display = "block";
-      popup.style.opacity = 0;
-      setTimeout(function () {
-        popup.style.opacity = 1;
-      }, 0);
-      document.documentElement.classList.add("is-opened");
-    }
+		if (!popup) return;
+		document.documentElement.classList.add("is-opened");
+    if (popup.classList.contains("filter-layer")) {
+			popup.style.display = "block";
+			popup.style.transform = "translateY(100%)"; 
+			popup.style.opacity = 1;
+			setTimeout(function () {
+				popup.style.transform = "translateY(0)";
+			}, 10);
+		} else {
+			popup.style.display = "block";
+			popup.style.opacity = 0;
+			setTimeout(function () {
+				popup.style.opacity = 1;
+			}, 0);
+		}
   }
+	window.modalOpen = modalOpen;
 
   // 모달닫기
-  function modalClose(obj) {
-    var popup = obj.closest(".modal__container");
-    if (popup) {
-      setTimeout(function () {
-        popup.style.display = "none";
-        popup.style.opacity = "";
-      }, 500);
-      popup.style.opacity = 0;
-      document.documentElement.classList.remove("is-opened");
-    }
-  }
+	function modalClose(obj) {
+		var popup = obj.closest(".modal__container, .filter-layer");
+		if (!popup) return;
+		if (popup.classList.contains("filter-layer")) {
+			popup.style.transform = "translateY(100%)";
+			setTimeout(function () {
+				popup.style.display = "none";
+			}, 300);
+		} else {
+			// 기존 fade-out
+			popup.style.opacity = 0;
+			setTimeout(function () {
+				popup.style.display = "none";
+				popup.style.opacity = "";
+			}, 500);
+		}
+		document.documentElement.classList.remove("is-opened");
+	}
+	window.modalClose = modalClose;
 
   // 모달열기 버튼
   document.querySelectorAll(".btn__modal").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      openpop(btn);
+      modalOpen(btn);
     });
   });
 
@@ -47,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".modal__close").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      closepop(btn);
+      modalClose(btn);
     });
   });
 
