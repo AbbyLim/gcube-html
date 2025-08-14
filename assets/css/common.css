@@ -432,7 +432,7 @@ label:hover {cursor:pointer;}
 @media (max-width:767px) {
 	.price__container .filter--wrap {position:relative;margin-top:-4px;}
 	.price__container .filter--wrap .btn__filter {position:absolute;top:-56px;right:0;display:inline-block;font-size:0;padding:13px 14px;border-radius:8px;background:rgba(243, 237, 255, 0.08);}
-	.price__container .filter--wrap .btn__filter:before {content:'';vertical-align:middle;display:inline-block;width:14px;height:14px;background:url(../images/ico_filter.png) no-repeat 50%/cover;}
+	.price__container .filter--wrap .btn__filter:before {content:'';vertical-align:middle;display:inline-block;width:14px;height:14px;margin-right:4px;background:url(../images/ico_filter.png) no-repeat 50%/cover;}
 	.price__container .filter--wrap .btn__filter span {font-size:14px;font-weight:700;line-height:1;vertical-align:middle;}
 	.price__container .filter--wrap .search--wrap {margin:0;}
 	.price__container .filter--wrap .search--wrap dt {display:none;}
