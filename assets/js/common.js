@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		tabTitles.forEach(title => {
 			title.addEventListener("click", () => {
 				const windowWidth = window.innerWidth;
-				if ((isAccordion && windowWidth < 1920) || isFaq) {
+				if ((isAccordion && windowWidth < 1881) || isFaq) {
 					if (title.classList.contains("is-active")) {
 						title.classList.remove("is-active");
 						return;
@@ -102,6 +102,17 @@ document.addEventListener("DOMContentLoaded", function () {
 				title.classList.add("is-active");
 			});
 		});
+		function resetActiveOnPc() {
+			const windowWidth = window.innerWidth;
+			if (windowWidth >= 1881) {
+				const activeTitle = tabWrap.querySelector(".tab__title.is-active");
+				if (!activeTitle && tabTitles.length > 0) {
+					tabTitles[0].classList.add("is-active");
+				}
+			}
+		}
+		resetActiveOnPc();
+		window.addEventListener("resize", resetActiveOnPc);
 	});
 
 	//디자인 셀렉트기능

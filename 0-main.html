@@ -108,7 +108,7 @@
 								<li class="swiper-slide">
 									<dl>
 										<dt><strong>Global GPU Grid</strong></dt>
-										<dd>gcube는 Global GPU네트워킹을 통해  클라우드 컴퓨팅 성능을 강력하게 유지하면서, 경제적인 가격에 공급하는 GPU  공유경제 서비스입니다.</dd>
+										<dd>gcube는 Global GPU네트워킹을 통해 클라우드 컴퓨팅 성능을 강력하게 유지하면서, 경제적인 가격에 공급하는 GPU 공유경제 서비스입니다.</dd>
 									</dl>
 								</li>
 								<li class="swiper-slide">
@@ -120,13 +120,13 @@
 								<li class="swiper-slide">
 									<dl>
 										<dt>다수의 국내 GPU 자원<br />확보로 <strong>높은 안정성</strong></dt>
-										<dd>국내 기반 서비스를 시작하며 다수의 공급자를 확보하여 다양한 GPU 자원,  빠른 네트워크를 통한 안정적인 서비스를 제공합니다. </dd>
+										<dd>국내 기반 서비스를 시작하며 다수의 공급자를 확보하여 다양한 GPU 자원, 빠른 네트워크를 통한 안정적인 서비스를 제공합니다. </dd>
 									</dl>
 								</li>
 								<li class="swiper-slide">
 									<dl>
 										<dt><strong>누구나 저렴하게</strong><br />이용 할 수 있는 GPU</dt>
-										<dd>공급자와의 직접 계약, 누구나 손쉽게 공급할 수 있는 기술로 공급 비용을 절감하여  보다 경제적으로 이용할 수 있습니다. </dd>
+										<dd>공급자와의 직접 계약, 누구나 손쉽게 공급할 수 있는 기술로 공급 비용을 절감하여 보다 경제적으로 이용할 수 있습니다. </dd>
 									</dl>
 								</li>
 							</ul>
@@ -1175,15 +1175,21 @@
 
 			// GPU견적 그래프모션 graph--wrap
 			const maxPrice = 140000;
-			const listItems = document.querySelectorAll('.graph--wrap .graph__list li');
+			let listItems = document.querySelectorAll('.graph--wrap .graph__list li');
 			const efficiencySection = document.querySelector('.efficiency');
-			const windowMiddle = window.innerHeight / 2;
-			const liHeights = Array.from(listItems).map(li => li.clientHeight);
-			const maxLiHeight = Math.max(...liHeights);
+			let windowMiddle = window.innerHeight / 2;
+			let liHeights = Array.from(listItems).map(li => li.clientHeight);
+			let maxLiHeight = Math.max(...liHeights);
 			function parsePrice(text) {
 				return Number(text.replace(/[^0-9]/g, ''));
 			}
+			function updateHeights() {
+				windowMiddle = window.innerHeight / 2;
+				liHeights = Array.from(listItems).map(li => li.clientHeight);
+				maxLiHeight = Math.max(...liHeights);
+			}
 			function setBarHeights() {
+				updateHeights();
 				listItems.forEach(li => {
 					const otherPriceText = li.querySelector('.graph--wrap dd.other .bar p').textContent;
 					const minePriceText = li.querySelector('.graph--wrap dd.mine .bar p').textContent;
@@ -1228,6 +1234,11 @@
 			});
 			window.addEventListener('scroll', checkEfficiencySection);
 			checkEfficiencySection();
+			window.addEventListener('resize', () => {
+				if (efficiencySection.classList.contains('active')) {
+					setBarHeights();
+				}
+			});
 
 			// 프로그램로그 모션 log--wrap
 			const inner = document.querySelector(".log__inner");
@@ -1302,6 +1313,18 @@
 					startAutoPlay(index);
 				});
 			});
+			// 비주얼 감추기
+			 function toggleScrolledClass() {
+				const mainWrap = document.querySelector(".main--wrap");
+				if (!mainWrap) return;
+				if (window.scrollY > window.innerHeight) {
+					mainWrap.classList.add("scrolled");
+				} else {
+					mainWrap.classList.remove("scrolled");
+				}
+			}
+			window.addEventListener("scroll", toggleScrolledClass);
+			window.addEventListener("load", toggleScrolledClass);
 		});
 	</script>
 </body>

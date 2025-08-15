@@ -10,6 +10,7 @@
 /* 메인 */
 .main__container {width:100%;padding-top: 100vh;background:#121212;}
 .main__container .visual { width: 100%;height: 100vh;position: fixed; top: 0; left: 0; z-index: 1; }
+.main--wrap.scrolled .main__container .visual {opacity:0;}
 .main__container .mainSwiper {height: 100vh;}
 .main__container .mainSwiper .swiper-slide {height: 100vh;}
 .main__container .mainSwiper .swiper-slide.mv1 {background:url(../images/mv1.png) no-repeat 50%/cover;}
@@ -46,7 +47,7 @@
 .main__container .main__content .info--wrap .benefit__list li:last-child dl:before {background:url(../images/ico_benefit4.svg) no-repeat 50%/cover;}
 .main__container .main__content .info--wrap .benefit__list li dl dt {padding: 48px 0 20px 0;min-height:94px;font-size: 32px;line-height: 47px;color: #fff;}
 .main__container .main__content .info--wrap .benefit__list li dl dt strong {font-weight:800;color: #C9B0FF;transition: color 0.5s ease-in-out;}
-.main__container .main__content .info--wrap .benefit__list li dl dd {font-size: 20px;line-height: 30px;color: #fff;}
+.main__container .main__content .info--wrap .benefit__list li dl dd {font-size: 20px;line-height: 30px;color: #fff;word-break:break-all;}
 .main__container .main__content .info--wrap .benefit__list li.active {border-color:rgba(130,71,255,0.4);}
 .main__container .main__content .info--wrap .benefit__list li.active:before,
 .main__container .main__content .info--wrap .benefit__list li.active:after {opacity:1;}
@@ -351,6 +352,8 @@
 	.main__container .realtime--wrap dl dt div {margin-bottom:8px;font-size:28px;}
 	.main__container .realtime--wrap dl dt p {font-size:16px;min-height:auto;}
 	.main__container .realtime--wrap dl dt p span {display:block;}
+	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap {position:relative;height:360px;overflow:hidden;background:url(../images/img_event_tb.png) no-repeat 50%/100% 100%;}
+	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap .pc-only {display:none;}
 	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap .warn__layer {width:74%;max-width:570px;}
 	.main__container .realtime--wrap .monitoring--wrap {margin-top:20px;padding:24px;}
 	.main__container .realtime--wrap .monitoring--wrap dt {position:static;width:100%;}
@@ -364,7 +367,8 @@
 	.main__container .realtime--wrap {margin-top:48px;}
 	.main__container .realtime--wrap .log-event--wrap dl {padding:16px;}
 	.main__container .realtime--wrap .log-event--wrap dl + dl {margin:24px 0 0 0;}
-	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap {position:relative;overflow:hidden;}
+	.main__container .realtime--wrap .log-event--wrap .log--wrap dd .log__text--wrap {padding:0;height:37.777vw;}
+	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap {position:relative;overflow:hidden;height:auto;}
 	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap:after {content:'';display:block;width:100%;height:60px;position:absolute;bottom:0;left:0;background: linear-gradient(0, #1D1B1F 0%, rgba(29, 27, 31, 0.00) 100%);}
 	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap .warn__layer {width:77%;padding:16px 8px 20px 8px;max-width:none;margin-top:10%;}
 	.main__container .realtime--wrap .log-event--wrap .event--wrap .status--wrap .warn__layer .warn__title {line-height:30px;}

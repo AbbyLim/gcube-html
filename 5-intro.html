@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="assets/images/img.png">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:description" content="AI 학습과 추론에 필수인 GPU! 지큐브에 무엇이든 물어보세요. NVIDIA GPU를 합리적인 가격으로 원할 때 사용 가능합니다.">
+	<meta property="og:site_name" content="지큐브">
+	<meta property="og:locale" content="en_US">
+	<title>지큐브</title> 
+	<link rel="shortcut icon" href="assets/favi/favicon.ico">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+	<div class="wrap intro--wrap">
+		<!-- 공통헤더 -->
+		<div class="header">
+			<div class="inner">
+				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
+				<div class="gnb">
+					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+				</div>
+			</div>
+		</div>
+		<!-- //공통헤더 -->
+
+		<!-- 공급자안내 -->
+		<div class="container">
+			<div class="inner">
+				<div class="content">
+					<h2 class="intro__title">Share the <span>GPU<span></h2>
+					<div class="contact__container">
+						<div class="intro__container--wrap">
+							<h3>GPU 공유경제 서비스</h3>
+							<div class="intro__content">
+								<h4>나의 유휴 GPU, 전 세계로 공유하고 매월 부가 수익까지 발생할 수 있다면?<div>gcube에서 시작하는 GPU 공유경제 서비스</div></h4>
+								<p>
+									유휴GPU 공유를 통한 가격경쟁력 확보는 더 많은 사용자와 더 많은 공급자를 이끌며 무한한 기회와 성공의 시작을 의미합니다.<br />
+									시장에서 증명된 공유경제 모델의 성공, GPU 공유 경제 모델의 성공은 gcube에서 실현하겠습니다.   
+								</p>
+								<div class="about--warp">
+									<dl>
+										<dt>공유경제</dt>
+										<dd>
+											<ul>
+												<li>자신이 소유하고 있는 것을 타인과 공유, 교환, 대여하며 가치를 창출하는 경제활동</li>
+												<li>
+													자원의 낭비 방지 및 수익 창출가능
+													<p>공유숙박, 공유택시, 공유오피스 등</p>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<div class="about__banner">
+										<div>
+											<h5>공유 GPU</h5>
+											<span><img src="assets/images/logo_intro.png" alt="gcube" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h3>공급자 맞춤 서비스</h3>
+							<div class="intro__content">
+								<h4>복잡한 절차,지식 없이 간단히 설치만 하면 누구나 공유할 수 있는<div>GPU 자원공유 시스템</div></h4>
+								<div class="swiper benefitSwiper">
+									<ul class="swiper-wrapper benefit__list">
+										<li class="swiper-slide">
+											<dl>
+												<dt><strong>누구나 공유할 수 있는 간편한 설정</strong></dt>
+												<dd>gcube는 Global GPU네트워킹을 통해 클라우드 컴퓨팅 성능을 강력하게 유지하면서, 경제적인 가격에 공급하는 GPU  공유경제 서비스입니다.</dd>
+											</dl>
+										</li>
+										<li class="swiper-slide">
+											<dl>
+												<dt><strong>안전하게 설계된 공유프로그램</strong></dt>
+												<dd>클라우드 네이티브 기술을 이용하여 CSP의 GPU와 PC의 GPU를 결합하여 동시접속이 많은 서비스, 수요가 일정하지 않은 경우 등 다양한 맞춤형 서비스를 제공합니다.</dd>
+											</dl>
+										</li>
+										<li class="swiper-slide">
+											<dl>
+												<dt><strong>SLA 레벨과 블록체인 기반의 정산</strong></dt>
+												<dd>국내 기반 서비스를 시작하며 다수의 공급자를 확보하여 다양한 GPU 자원,  빠른 네트워크를 통한 안정적인 서비스를 제공합니다. </dd>
+											</dl>
+										</li>
+										<li class="swiper-slide">
+											<dl>
+												<dt><strong>국내 전문가의 기술지원</strong></dt>
+												<dd>공급자와의 직접 계약, 누구나 손쉽게 공급할 수 있는 기술로 공급 비용을 절감하여  보다 경제적으로 이용할 수 있습니다. </dd>
+											</dl>
+										</li>
+									</ul>
+									<div class="swiper-pagination"></div>
+								</div>
+								<script>
+									let benefitSwiper = null;
+									let activeTimer = null;
+									let activeIndex = 0;
+									function addActiveAnimation() {
+										const slides = document.querySelectorAll('.benefitSwiper .swiper-slide');
+										if (slides.length === 0) return;
+										slides.forEach(el => el.classList.remove('active'));
+										slides[0].classList.add('active');
+										activeIndex = 0;
+										activeTimer = setInterval(() => {
+										slides[activeIndex].classList.remove('active');
+										activeIndex = (activeIndex + 1) % slides.length;
+										slides[activeIndex].classList.add('active');
+										}, 4000);
+									}
+									function removeActiveAnimation() {
+										clearInterval(activeTimer);
+										const slides = document.querySelectorAll('.benefitSwiper .swiper-slide');
+										slides.forEach(el => el.classList.remove('active'));
+										activeIndex = 0;
+									}
+									function enableSwiper() {
+										if (!benefitSwiper) {
+										benefitSwiper = new Swiper(".benefitSwiper", {
+											pagination: {
+											el: ".benefitSwiper .swiper-pagination",
+												clickable: true,
+											},
+											autoplay: {
+												delay: 4000,
+												disableOnInteraction: false,
+											},
+											spaceBetween: 16,
+										});
+										}
+									}
+									function disableSwiper() {
+										if (benefitSwiper) {
+										benefitSwiper.destroy(true, true);
+										benefitSwiper = null;
+										}
+									}
+									function handleResponsiveSwiper() {
+										if (window.innerWidth <= 767) {
+										enableSwiper();
+										} else {
+										disableSwiper();
+										removeActiveAnimation();
+										addActiveAnimation();
+										}
+									}
+									handleResponsiveSwiper();
+									window.addEventListener('resize', handleResponsiveSwiper);
+									window.addEventListener('beforeunload', removeActiveAnimation);
+								</script>
+							</div>
+							<h3>다양한 환경의 공급 방식</h3>
+							<div class="intro__content">
+								<h4>서버 환경과 조건을 고려하여 공급방식을 세분화 하고 비용을 산정하여<div>합리적인 수익 모델을 제시하여 드립니다</div></h4>
+								<div class="flow-model--wrap">
+									<div class="model--wrap">
+										<div class="type__list">
+											<div class="type__item item1">
+												<dl>
+													<dt>
+														<span>TIER 1</span>
+														<strong>클라우드 사업자</strong>
+														<div>Cloud Provider CSP</div>
+													</dt>
+													<dd>
+														<a href="javascript:;" class="btn__link">Partner 문의</a>
+														<ul class="business__list">
+															<li>
+																<div><img src="assets/images/ico_logo1.png" alt="Naver Cloud " /></div>
+																<span>Naver Cloud</span>
+															</li>
+															<li>
+																<div><img src="assets/images/ico_logo2.png" alt="Amazon Web Services" /></div>
+																<span>Amazon Web Services</span>
+															</li>
+															<li>
+																<div><img src="assets/images/ico_logo3.png" alt="Microsoft Azure" /></div>
+																<span>Microsoft Azure</span>
+															</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+											<div class="type__item item2">
+												<dl>
+													<dt>
+														<span>TIER 2</span>
+														<strong>전용 서버 공급</strong>
+														<div>DATA center (IDC), PC방</div>
+													</dt>
+													<dd>
+														<a href="javascript:;" class="btn__link">계약 문의</a>
+														<ul class="info__list">
+															<li>SLA 계약을 통해 GPU서버 제공</li>
+															<li>보다 높은 수익과 안정적 수익 실현</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+											<div class="type__item item3">
+												<dl>
+													<dt>
+														<span>TIER 3</span>
+														<strong>Interruptible 방식 공급</strong>
+														<div>PC방, 개인 PC </div>
+													</dt>
+													<dd>
+														<a href="javascript:;" class="btn__link">지금 공유하기</a>
+														<ul class="info__list">
+															<li>유휴 자원의 활용을 통한 부가 수익</li>
+															<li>간단한 설치 및 미사용시간에 자동 공유로 편리한 유지관리</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<dl class="flow--wrap">
+										<dt><img src="assets/images/logo_intro.png" alt="gcube" /></dt>
+										<dd>
+											<ul>
+												<li>
+													<strong>AI company</strong>
+													<span>AI/ML </span>
+												</li>
+												<li>
+													<strong>School, company</strong>
+													<span>연구, 개발</span>
+												</li>
+												<li>
+													<strong>Developer</strong>
+													<span>연구, 개발</span>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<h3>나의 GPU의 월 예상 수익은?</h3>
+							<div class="intro__content">
+								<h4>보유중인 유휴 GPU를 gcube에 연결하여 <div>월 최대 930,000원의 부가수익을 창출 할 수 있습니다</div></h4>
+								<div class="price__item--wrap">
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="price__item">
+										<h4>RTX 4090</h4>
+										<div class="price">~ 월 913,000원</div>
+										<div class="price__spec">
+											<dl>
+												<dt>최소금액/hr</dt>
+												<dd>₩ 910원</dd>
+											</dl>
+											<dl>
+												<dt>최대금액/hr</dt>
+												<dd>₩ 1300</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<ul class="price-info__list">
+									<li> 일 24시간, 월 30일 full time 공유 시 예상 수익입니다.</li>
+									<li>예상 수익은 공유하는 GPU 스펙과 공유시간, 자원사용량에 따라 달라질 수 있습니다.</li>
+								</ul>
+								<div class="price-btn--wrap">
+									<button type="button" class="btn__default btn__model">다른 모델 수익 계산</button>
+								</div>
+								<div class="banner--wrap">
+									<div class="banner__item">
+										<dl>
+											<dt>누구나 손쉽게 설치하고 즉시 공유할 수 있는 <span>gcube agent</span></dt>
+											<dd>
+												Window를 통해 프로그램다운받고 로그인만 하면 즉시 공유 가능!<br />
+												 지금 바로 나의 GPU를 공유하고 수익을 올려보세요. 
+											</dd>
+										</dl>
+										<button type="button" class="btn__default btn__download">gcube agent 다운로드</button>
+									</div>
+									<div class="banner__item">
+										<dl>
+											<dt>공유할 GPU가 있으신가요?</dt>
+											<dd>대량 공급 상담이나 GPU 공유 관련 기술지원 필요하다면 지금 문의주세요.</dd>
+										</dl>
+										<button type="button" class="btn__default btn__mail"><span>이메일 문의</span></button>
+										<button type="button" class="btn__default btn__kakao"><span>카카오 채팅 문의</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
+	</div>
+</body>
+</html>
