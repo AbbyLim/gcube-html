@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="assets/images/img.png">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta property="og:description" content="AI 학습과 추론에 필수인 GPU! 지큐브에 무엇이든 물어보세요. NVIDIA GPU를 합리적인 가격으로 원할 때 사용 가능합니다.">
+	<meta property="og:site_name" content="지큐브">
+	<meta property="og:locale" content="en_US">
+	<title>지큐브</title> 
+	<link rel="shortcut icon" href="assets/favi/favicon.ico">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.jquery.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 공통헤더 -->
+		<div class="header">
+			<div class="inner">
+				<h1><a href="/"><span  class="blind">gcube</span></a></h1>
+				<div class="gnb">
+					<a href="javascript:;" class="btn__nav"><span class="blind">모바일 GNB 열기</span></a>
+					<div class="nav">
+						<div class="nav-top">
+							<div class="logo"><a href="/"><span  class="blind">gcube</span></a></div>
+							<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+						</div>
+						<ul>
+							<li><a href="1-price.html" target="_self">Price</a></li>
+							<li><a href="2-docs.html" target="_self">Docs</a></li>
+							<li><a href="3-faq.html" target="_self">FAQ</a></li>
+							<li><a href="4-contact.html" target="_self">Contact</a></li>
+						</ul>
+						<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+					</div>
+					<a href="javascript:;" class="btn__gpu">GPU 관리</a>
+				</div>
+			</div>
+		</div>
+		<!-- //공통헤더 -->
+
+		<!-- Contact -->
+		<div class="container">
+			<div class="inner">
+				<div class="content">
+					<h2>Contact</h2>
+					<p class="h2__description">
+						서비스 이용 중 문의가 있으신가요?<br />
+						이용문의, 사업제휴문의, 공급 문의 등 모든 문의가 가능합니다. 언제든 문의 주시면, 확인 후 안내드리겠습니다.
+					</p>
+					<div class="contact__container">
+						<div class="contact-faq--wrap">
+							<h3>자주 묻는 질문</h3>
+							<div class="swiper contact-faq-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<dl class="faq__item">
+											<dt>
+												<strong>(마크업형태)워크로드 등록이 안됩니다.</strong>
+												<p>워크로드가 등록이 되지 않는 경우는 여러 원인이 있을 수 있으나 아래 대표적인 등록 불가 사유를 확인해 보시기 바랍니다.</p>
+											</dt>
+											<dd>
+												<dl>
+													<dt>1. 사용 가능 포인트가 없는 경우</dt>
+													<dd>
+														<p>사용가능 포인트가 0원인 경우 워크로드의 등록이 되지 않습니다.</p>
+														<p>포인트 충전 또는 사용가능 포인트로 전환 후 등록하여 주세요.</p>
+													</dd>
+													<dt>2. 이미지 검증이 되지 않은 경우</dt>
+													<dd>
+														<p>배포 이미지를 먼저 검증 후 배포가 가능합니다.</p>
+														<p>이미지 등록 후 이미지 검증을 완료 후 등록해주세요.</p>
+													</dd>
+													<dt>3. 기타 입력 사항을 미기재한 경우</dt>
+													<dd>
+														<p>워크로드 명을 기재 하지 않았거나 GPU를 선택하지 않은 경우 등</p>
+														<p>입력 사항을 모두 입력하였는지 확인해주세요.</p>
+													</dd>
+												</dl>
+												<p>이후에도 등록이 되지 않는 경우, 카카오톡 상담이나 문의를 남겨주시면 확인 후 개별 연락드리겠습니다.</p>
+											</dd>
+										</dl>
+									</div>
+									<div class="swiper-slide">
+										<dl class="faq__item">
+											<dt>
+												<strong>(BO등록형태)워크로드 등록이 안됩니다.</strong>
+												<p>워크로드가 등록이 되지 않는 경우는 여러 원인이 있을 수 있으나 아래 대표적인 등록 불가 사유를 확인해 보시기 바랍니다.</p>
+											</dt>
+											<dd>
+												<strong>1. 사용 가능 포인트가 없는 경우</strong><br /><br />
+												사용가능 포인트가 0원인 경우 워크로드의 등록이 되지 않습니다.<br />
+												포인트 충전 또는 사용가능 포인트로 전환 후 등록하여 주세요.<br /><br /><br />
+												<strong>2. 이미지 검증이 되지 않은 경우</strong><br /><br />
+												배포 이미지를 먼저 검증 후 배포가 가능합니다.<br />
+												이미지 등록 후 이미지 검증을 완료 후 등록해주세요.<br /><br /><br />
+												<strong>3. 기타 입력 사항을 미기재한 경우</strong><br /><br />
+												워크로드 명을 기재 하지 않았거나 GPU를 선택하지 않은 경우 등<br />
+												입력 사항을 모두 입력하였는지 확인해주세요.<br /><br /><br /><br />
+												이후에도 등록이 되지 않는 경우, 카카오톡 상담이나 문의를 남겨주시면 확인 후 개별 연락드리겠습니다.
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="navigation--wrap">
+									<div class="swiper-button-prev">이전</div>
+									<div class="swiper-button-next">다음</div>
+								</div>
+							</div>
+							<script>
+								var CFSwiper = new Swiper(".contact-faq-swiper", {
+									autoHeight: true,
+									spaceBetween: 20,
+									navigation: {
+										nextEl: ".contact-faq-swiper .swiper-button-next",
+										prevEl: ".contact-faq-swiper .swiper-button-prev",
+									},
+									observer: true,
+									observeParents: true,
+								});
+							</script>
+						</div>
+						<div class="contact--wrap">
+							<div class="dl--wrap">
+								<div>
+									<dl>
+										<dt>
+											<label for="contact1" class="required">이름</label>
+										</dt>
+										<dd>
+											<input type="text" id="contact1" placeholder="이름을 입력해주세요." class="input__txt" />
+										</dd>
+									</dl>
+								</div>
+								<div>
+									<dl>
+										<dt>
+											<label for="contact2">기업명</label>
+										</dt>
+										<dd>
+											<input type="text" id="contact2" placeholder="기업명을 입력해주세요." class="input__txt" />
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<dl>
+								<dt>
+									<label for="contact3" class="required">제목</label>
+								</dt>
+								<dd>
+									<input type="text" id="contact3" placeholder="제목을 입력해주세요." class="input__txt" />
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<label for="contact4" class="required">이메일</label>
+								</dt>
+								<dd>
+									<input type="text" id="contact4" placeholder="email@email.com" class="input__txt" />
+								</dd>
+							</dl>
+							<div class="dl--wrap">
+								<div>
+									<dl>
+										<dt>
+											<label for="contact5" class="required">전화번호</label>
+										</dt>
+										<dd>
+											<input type="text" id="contact5" placeholder="000-0000-0000" class="input__txt" />
+										</dd>
+									</dl>
+								</div>
+								<div>
+									<dl>
+										<dt>
+											<label for="contact6">국가</label>
+										</dt>
+										<dd>
+											<div class="option-select">
+												<input type="text" id="contact6" placeholder="나라를 선택해주세요." class="input__txt" readonly />
+												<div class="option--layer">
+													<h4>나라를 선택해주세요.</h4>
+													<ul>
+														<li>
+															<label>
+																<input type="radio" name="nation" value="나라이름1" />
+																<span>나라이름1</span>
+															</label>
+														<li>
+														<li>
+															<label>
+																<input type="radio" name="nation" value="나라이름2" />
+																<span>나라이름2</span>
+															</label>
+														<li>
+														<li>
+															<label>
+																<input type="radio" name="nation" value="나라이름3" />
+																<span>나라이름3</span>
+															</label>
+														<li>
+													</ul>
+													<button type="button" class="btn__close"><span class="blind">닫기</span></button>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<dl>
+								<dt>
+									<label for="contact7" class="required">내용</label>
+								</dt>
+								<dd>
+									<textarea id="contact7" placeholder="문의사항을 입력해주세요." resize="none"></textarea>
+								</dd>
+							</dl>
+							<div class="btn--wrap">
+								<button type="button" class="btn__default btn__contact">문의하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통푸터 -->
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="logo--wrap">
+					<h2><a href="javascript:;"><span class="blind">gcube</span></a></h2>
+					<ul class="sns__list">
+						<li class="sns-x"><a href="javascript:;"><span class="blind">공식X</span></a></li>
+						<li class="sns-youtube"><a href="javascript:;"><span class="blind">공식유튜브</span></a></li>
+						<li class="sns-discord"><a href="javascript:;"><span class="blind">공식디스코드</span></a></li>
+					</ul>
+				</div>
+				<ul class="footer__gnb">
+					<li><a href="1-price.html" target="_self">Price</a></li>
+					<li><a href="2-docs.html" target="_self">Docs</a></li>
+					<li><a href="3-faq.html" target="_self">FAQ</a></li>
+					<li><a href="4-contact.html" target="_self">Contact</a></li>
+				</ul>
+				<div class="footer__info">
+					<div class="info--wrap pc-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap tablet-only">
+						<div>
+							<dl>
+								<dt>데이터얼라이언스 주식회사</dt>
+							</dl>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Address</dt>
+								<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="info--wrap mo-only">
+						<dl>
+							<dt>데이터얼라이언스 주식회사</dt>
+						</dl>
+						<div>
+							<dl>
+								<dt>대표이사</dt>
+								<dd>이광범</dd>
+							</dl>
+							<dl>
+								<dt>사업자 등록번호</dt>
+								<dd>415-81-56947</dd>
+							</dl>
+						</div>
+						<div>
+							<dl>
+								<dt>통신판매번호</dt>
+								<dd>2022-서울강남-0448</dd>
+							</dl>
+							<dl>
+								<dt>Phone</dt>
+								<dd>+82-2-6354-3282</dd>
+							</dl>
+						</div>							
+						<dl>
+							<dt>Address</dt>
+							<dd>서울특별시 강남구 강남대로 484, 410호 (논현동, 패스트파이브)</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="copyright--wrap">
+					<ul class="term__list">
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">마케팅 정보 수신 동의</a></li>
+					</ul>
+					<div class="copyright">© 2025 — DATAALLIANCE. All right reserved.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공통dim -->
+		<div class="dim"></div>
+	</div>
+</body>
+</html>

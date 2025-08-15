@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 				popup.style.display = "none";
 			}, 300);
 		} else {
-			// 기존 fade-out
 			popup.style.opacity = 0;
 			setTimeout(function () {
 				popup.style.display = "none";
@@ -68,6 +67,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+	document.querySelectorAll(".modal__container, .filter-layer").forEach(function(modal) {
+    var dim = modal.querySelector(".dim");
+    if (dim) {
+      dim.addEventListener("click", function(e) {
+        modalClose(dim);
+      });
+    }
+  });
+
   // 토글 버튼
   document.querySelectorAll(".btn__toggle").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -76,23 +84,87 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 	// 탭
-	const tabWraps = document.querySelectorAll('.tab--wrap');
-  tabWraps.forEach(tabWrap => {
-    const isAccordion = tabWrap.classList.contains('accordion');
-    const isFaq = tabWrap.classList.contains('faq--wrap');
-    const tabTitles = tabWrap.querySelectorAll('.tab__title');
-    tabTitles.forEach(title => {
-      title.addEventListener('click', () => {
-        const windowWidth = window.innerWidth;
-        if ((isAccordion && windowWidth < 1920) || isFaq) {
-          if (title.classList.contains('is-active')) {
-            title.classList.remove('is-active');
-            return;
-          }
-        }
-        tabTitles.forEach(t => t.classList.remove('is-active'));
-        title.classList.add('is-active');
-      });
-    });
-  });
+	const tabWraps = document.querySelectorAll(".tab--wrap");
+	tabWraps.forEach(tabWrap => {
+		const isAccordion = tabWrap.classList.contains("accordion");
+		const isFaq = tabWrap.classList.contains("faq--wrap");
+		const tabTitles = tabWrap.querySelectorAll(".tab__title");
+		tabTitles.forEach(title => {
+			title.addEventListener("click", () => {
+				const windowWidth = window.innerWidth;
+				if ((isAccordion && windowWidth < 1920) || isFaq) {
+					if (title.classList.contains("is-active")) {
+						title.classList.remove("is-active");
+						return;
+					}
+				}
+				tabTitles.forEach(t => t.classList.remove("is-active"));
+				title.classList.add("is-active");
+			});
+		});
+	});
+
+	//디자인 셀렉트기능
+	document.querySelectorAll(".option-select").forEach(selectBox => {
+		const input = selectBox.querySelector("input.input__txt");
+		const optionLayer = selectBox.querySelector(".option--layer");
+		const closeBtn = optionLayer.querySelector(".btn__close");
+		const radios = optionLayer.querySelectorAll("input[type=\"radio\"]");
+		function updateOptionSelectMode() {
+			if (window.innerWidth <= 767) {
+				selectBox.classList.remove("is-active");
+				optionLayer.style.display = "block";
+			} else {
+				selectBox.classList.remove("is-active");
+				optionLayer.style.display = "";
+			}
+		}
+		input.addEventListener("click", function () {
+			selectBox.classList.toggle("is-active");
+			if (window.innerWidth <= 767) {
+				document.documentElement.classList.add("is-opened");
+			}
+		});
+		radios.forEach(radio => {
+			radio.addEventListener("change", function () {
+				input.value = this.value;
+				selectBox.classList.remove("is-active");
+				if (window.innerWidth <= 767) {
+					document.documentElement.classList.remove("is-opened");
+				}
+			});
+		});
+		document.addEventListener("click", function (e) {
+			if (!selectBox.contains(e.target)) {
+				selectBox.classList.remove("is-active");
+				if (window.innerWidth <= 767) {
+					document.documentElement.classList.remove("is-opened");
+				}
+			}
+		});
+		closeBtn.addEventListener("click", () => {
+			selectBox.classList.remove("is-active");
+			document.documentElement.classList.remove("is-opened");
+		});
+		updateOptionSelectMode();
+		window.addEventListener("resize", updateOptionSelectMode);
+	});
+
+	function resetFilterLayerStyle() {
+		const filterLayers = document.querySelectorAll(".filter-layer");
+		const optionSelects = document.querySelectorAll(".option-select");
+		const windowWidth = window.innerWidth;
+		if (windowWidth > 767) {
+			filterLayers.forEach(layer => {
+				layer.style.display = "";
+				layer.style.transform = "";
+				layer.style.opacity = "";
+			});
+			optionSelects.forEach(selectBox => {
+				selectBox.classList.remove("is-active");
+			});
+		}
+	}
+	resetFilterLayerStyle();
+	window.addEventListener("resize", resetFilterLayerStyle);
 });
