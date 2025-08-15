@@ -249,7 +249,7 @@ textarea::placeholder {font-size:16px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap {position:relative;height:380px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-tab--wrap {display:none;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper {width:337px;height:100%;margin:0;padding-right:20px;}
-.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide {height:56px;text-align:center;line-height:1.5;font-weight:500;font-size:16px;padding:18px 0;box-sizing:border-box;border-radius:12px;border:1px solid rgba(243, 237, 255, 0.16);background:rgba(243, 237, 255, 0.02);backdrop-filter:blur(16px);}
+.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide {height:56px;text-align:center;line-height:1;font-weight:500;font-size:16px;padding:18px 0;box-sizing:border-box;border-radius:12px;border:1px solid rgba(243, 237, 255, 0.16);background:rgba(243, 237, 255, 0.02);backdrop-filter:blur(16px);}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide.is-active {background:#8247FF;border-color:#8247FF;font-weight:700;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide.is-active:before {content:'';display:block;width:13px;height:2px;background:#8247FF;position:absolute;top:50%;margin-top:-1px;right:-13px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide.is-active:after {content:'';display:block;width:7px;height:7px;border-radius:100%;background:#8247FF;position:absolute;top:50%;transform:translateY(-50%);right:-16px;}
@@ -352,7 +352,7 @@ textarea::placeholder {font-size:16px;}
 .price__container .filter--wrap {font-size:0;margin-bottom:40px;}
 .price__container .filter--wrap .search--wrap,
 .price__container .filter--wrap .search--wrap dt,
-.price__container .filter--wrap .search--wrap dd {display:inline-block;}
+.price__container .filter--wrap .search--wrap dd {display:inline-block;vertical-align:top;}
 .price__container .filter--wrap .search--wrap dt {font-size:18px;opacity:0.8;padding-right:12px;}
 .price__container .filter--wrap .search--wrap dd {}
 .price__container .filter--wrap .search--wrap dd .input__search {width:474px;}
