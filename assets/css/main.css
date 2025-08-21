@@ -24,7 +24,7 @@
 .main__container .mainSwiper .swiper-pagination-bullet-active {opacity:1;}
 .main__container .main__content {position: relative;width:100%;z-index:3;background:#121212;}
 .main__container .main__content.content-fixed {position: fixed; bottom: 0;z-index:2;}
-.main__container .main__content1 {background:#121212 url(../images/bg_mc1.png) no-repeat 50%/cover;}
+.main__container .main__content1 {background:#121212 url(../images/bg_mc1.png) no-repeat 50%/cover;z-index:4;}
 .main__container .main__content2 {background:#121212 url(../images/bg_mc2.png) no-repeat 50% 0/cover;}
 .main__container .main__content .inner {padding: 80px 120px 0 120px;}
 .main__container .main__content h2 {position: relative;padding: 32px 0;font-size: 32px;line-height: 47px;font-weight: 800;margin-bottom:120px;}
@@ -138,7 +138,7 @@
 .main__container .efficiency .comparison--wrap .option--wrap .btn__option {position:relative;display: inline-block;height:79px;padding:0 36px 0 0;box-sizing:border-box;border-bottom:1px solid #F3EDFF;}
 .main__container .efficiency .comparison--wrap .option--wrap .btn__option span {color:rgba(243,237,255,0.5);font-size:40px;line-height:79px;font-weight:700;}
 .main__container .efficiency .comparison--wrap .option--wrap .btn__option:after {content:'';display:block;position:absolute;top:50%;right:0;transform:translateY(-50%);width:24px;height:24px;background:url(../images/comp_arr.svg) no-repeat 50%/cover;}
-.main__container .efficiency .comparison--wrap .option--wrap .option__list {display:none;z-index:1;position:absolute;top:87px;left:0;width:100%;padding:6px 0;box-sizing:border-box;background:#1E1E1E;border: 1px solid rgba(243, 237, 255, 0.16);box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.08);border-radius:12px;}
+.main__container .efficiency .comparison--wrap .option--wrap .option__list {display:none;max-height:500px;overflow-y:auto;z-index:1;position:absolute;top:87px;left:0;width:100%;padding:6px 0;box-sizing:border-box;background:#1E1E1E;border: 1px solid rgba(243, 237, 255, 0.16);box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.08);border-radius:12px;}
 .main__container .efficiency .comparison--wrap .option--wrap .option__list li + li {border-top: 1px solid rgba(255, 255, 255, 0.12);}
 .main__container .efficiency .comparison--wrap .option--wrap .option__list li {position:relative;}
 .main__container .efficiency .comparison--wrap .option--wrap .option__list li input {width:1px;height:1px;opacity:0;position:absolute;top:0;left:0;}
@@ -178,7 +178,7 @@
 	.main__container .efficiency .comparison--wrap .option--wrap .btn__option {height:57px;}
 	.main__container .efficiency .comparison--wrap .option--wrap .btn__option span {font-size:28px;line-height:57px;font-weight:800;}
 	.main__container .efficiency .comparison--wrap .option--wrap .btn__option:after {width:20px;height:20px;}
-	.main__container .efficiency .comparison--wrap .option--wrap .option__list {top:65px;}
+	.main__container .efficiency .comparison--wrap .option--wrap .option__list {top:65px;max-height:350px;}
 	.main__container .efficiency .comparison--wrap .option__price {display:inline-block;vertical-align:bottom;padding: 0;}
 	.main__container .efficiency .comparison--wrap .option__price dd {line-height:57px;}
 	.main__container .efficiency .comparison--wrap .option__price dd strong {font-size:28px;line-height:57px;}

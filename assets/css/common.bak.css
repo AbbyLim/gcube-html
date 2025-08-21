@@ -251,9 +251,11 @@ textarea::placeholder {font-size:16px;}
 .price__container .cost--wrap .step--wrap .step__item.step3 {width:295px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap {position:relative;height:380px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-tab--wrap {display:none;}
-.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper {position:relative;width:337px;height:100%;margin:0;}
+.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper {position:relative;width:337px;height:100%;margin:0;padding-right:16px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide {height:56px;text-align:center;line-height:1;font-weight:500;font-size:16px;padding:18px 0;box-sizing:border-box;border-radius:12px;border:1px solid rgba(243, 237, 255, 0.16);background:rgba(243, 237, 255, 0.02);backdrop-filter:blur(16px);}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide.is-active {background:#8247FF;border-color:#8247FF;font-weight:700;}
+.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper:before {content:'';display:block;width:13px;height:2px;background:#8247FF;position:absolute;top:27px;margin-top:-1px;right:4px;}
+.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper:after {content:'';display:block;width:7px;height:7px;border-radius:100%;background:#8247FF;position:absolute;top:24px;;right:0;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper--wrap {position:absolute;top:0;right:0;width:172px;bottom:0;overflow:hidden;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper {display:none;width:172px;max-height:100%;box-sizing:border-box;padding-bottom:28px;}
 .price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper .swiper-wrapper {box-sizing:border-box;padding:12px 8px 0 8px;border-radius:8px;border:1px solid #8247FF;background:rgba(130, 71, 255, 0.08);box-shadow:0 0 8px 0 rgba(130, 71, 255, 0.80) inset;}
@@ -300,6 +302,8 @@ textarea::placeholder {font-size:16px;}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap {height:320px;}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper {width:calc(50% - 8px);}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper--wrap {width:calc(50% - 8px);}
+	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper:before {width:16px;right:0;}
+	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper:after {right:-3px;}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper--wrap .child-swiper {width:100%;}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .parent-swiper .swiper-slide {height:48px;padding:15px 0;border-radius:8px;}
 	.price__container .cost--wrap .step--wrap .step__item .step__item-swiper--wrap .child-swiper .swiper-slide {height:48px;padding:16px 0;border-radius:8px;}
@@ -630,7 +634,7 @@ textarea::placeholder {font-size:16px;}
 .intro__container--wrap h3:before {position: absolute;bottom: 0;left:50%;transform:translateX(-50%);content:'';display: block;width: 100%;height:1.5px;background: linear-gradient(to right,#7C54D5 0%,#412C6F 27%,rgba(65,44,111,0.2) 100%);}
 .intro__container--wrap h3 span {background: linear-gradient(to right, #B08BFF, #F3EDFF);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .intro__container--wrap .intro__content {padding:64px 0 120px 0;}
-.intro__container--wrap .intro__content h4 {font-size:40px;line-height:1.5;font-weight:700;}
+.intro__container--wrap .intro__content h4 {font-size:40px;line-height:1.5;font-weight:800;}
 .intro__container--wrap .intro__content h4 + p {padding:20px 0;font-size:20px;line-height:1.5;}
 .intro__container--wrap .intro__content .about--warp {font-size:0;padding:60px 0 0 0;}
 .intro__container--wrap .intro__content .about--warp dl {display:inline-block;width:412px;padding:70px 40px;vertical-align:top;box-sizing:border-box;border-radius:12px;border:1px solid rgba(243, 237, 255, 0.16);background:rgba(243, 237, 255, 0.02);backdrop-filter:blur(10px);}
