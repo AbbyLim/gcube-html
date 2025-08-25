@@ -301,6 +301,14 @@
 	.main__container .variety .tab--wrap .tab__content .product__list li .product__price {display:inline;font-size:16px;line-height:24px;}
 	.main__container .variety .tab--wrap .tab__content .product__list li .product__price strong {font-size:16px;line-height:24px;margin-right:4px;vertical-align:bottom;}
 	.main__container .variety .tab--wrap .tab__content .product__list li .product__price span {font-size:16px;line-height:24px;vertical-align:bottom;}
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl {padding-right:15px;}
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl + dl {padding-left:15px;}
+}
+@media (max-width:370px) {
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl {padding-right:10px;}
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl + dl {padding-left:10px;}
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl dt {font-size:12px;}
+	.main__container .variety .tab--wrap .tab__content .example--wrap dl dd {font-size:17px;}
 }
 /* 메인 - 이벤트로그 */
 @keyframes warnFade {
