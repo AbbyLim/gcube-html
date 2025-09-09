@@ -397,7 +397,7 @@ textarea::placeholder {font-size:16px;}
 .price__container .faq--wrap .price__item--wrap .price__item:nth-child(3n+1) {margin-left:0;}
 .price__container .faq--wrap .price__item--wrap .price__item h4 {font-size:0;}
 .price__container .faq--wrap .price__item--wrap .price__item h4 span {font-size:20px;line-height:1.5;opacity:0.4;font-weight:800;vertical-align:middle;}
-.price__container .faq--wrap .price__item--wrap .price__item h4 strong {display:inline-block;margin-left:12px;font-size:28px;font-weight:800;line-height:1.5;vertical-align:middle;}
+.price__container .faq--wrap .price__item--wrap .price__item h4 strong {display:inline-block;margin-left:12px;font-size:26px;font-weight:800;line-height:1.5;vertical-align:middle;}
 .price__container .faq--wrap .price__item--wrap .price__item .product__spec {padding:20px 0 6px 0;font-size:0;}
 .price__container .faq--wrap .price__item--wrap .price__item .product__spec dl {display:inline-block;}
 .price__container .faq--wrap .price__item--wrap .price__item .product__spec dt,
@@ -409,6 +409,10 @@ textarea::placeholder {font-size:16px;}
 .price__container .faq--wrap .price__item--wrap .price__item .product__price span {opacity:0.6;font-size:16px;line-height:1.5;}
 @media (hover: hover) and (pointer: fine) {
 	.price__container .faq--wrap .tab__title:hover {cursor:pointer;}
+}
+@media (min-width:1881px) {
+	.price__container .faq--wrap .price__item--wrap .price__item h4 span {display:block;}
+	.price__container .faq--wrap .price__item--wrap .price__item h4 strong {display:block;margin-left:0;}
 }
 @media (max-width:1880px) {
 	.price__container .filter--wrap {margin-bottom:32px;}
